@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7C703FCAC3F7D193BDDF3CC9 /* Pods_ImageSwiper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA3C001408ADB1C1ABEDAD9 /* Pods_ImageSwiper.framework */; };
+		DE8DD8AF1FFC697400A7EBD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DD8AE1FFC697400A7EBD0 /* AppDelegate.swift */; };
+		DE8DD8B11FFC697400A7EBD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DD8B01FFC697400A7EBD0 /* ViewController.swift */; };
+		DE8DD8B41FFC697400A7EBD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8DD8B21FFC697400A7EBD0 /* Main.storyboard */; };
+		DE8DD8B61FFC697400A7EBD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE8DD8B51FFC697400A7EBD0 /* Assets.xcassets */; };
+		DE8DD8B91FFC697400A7EBD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8DD8B71FFC697400A7EBD0 /* LaunchScreen.storyboard */; };
+		DE8DD8C41FFC697400A7EBD0 /* ImageSwiperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DD8C31FFC697400A7EBD0 /* ImageSwiperTests.swift */; };
+		DE8DD8CF1FFC697400A7EBD0 /* ImageSwiperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DD8CE1FFC697400A7EBD0 /* ImageSwiperUITests.swift */; };
+		DE8DD8DE1FFC6B0200A7EBD0 /* YKIMageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DD8DD1FFC6B0200A7EBD0 /* YKIMageContentView.swift */; };
+		DE8DD8E21FFC895000A7EBD0 /* hehe.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8DD8E11FFC895000A7EBD0 /* hehe.png */; };
+		DE8DD8E41FFCB46000A7EBD0 /* YKImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DD8E31FFCB46000A7EBD0 /* YKImageViewCell.swift */; };
+		DEAB23BF1FFDC35100D7F1BC /* YKCellObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAB23BE1FFDC35100D7F1BC /* YKCellObject.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE8DD8C01FFC697400A7EBD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE8DD8A31FFC697400A7EBD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE8DD8AA1FFC697400A7EBD0;
+			remoteInfo = ImageSwiper;
+		};
+		DE8DD8CB1FFC697400A7EBD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE8DD8A31FFC697400A7EBD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE8DD8AA1FFC697400A7EBD0;
+			remoteInfo = ImageSwiper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0482BFD908EC7ACA2DF4AD2A /* Pods-ImageSwiper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSwiper.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageSwiper/Pods-ImageSwiper.release.xcconfig"; sourceTree = "<group>"; };
+		DE8DD8AB1FFC697400A7EBD0 /* ImageSwiper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSwiper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE8DD8AE1FFC697400A7EBD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE8DD8B01FFC697400A7EBD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE8DD8B31FFC697400A7EBD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE8DD8B51FFC697400A7EBD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE8DD8B81FFC697400A7EBD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE8DD8BA1FFC697400A7EBD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE8DD8BF1FFC697400A7EBD0 /* ImageSwiperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageSwiperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE8DD8C31FFC697400A7EBD0 /* ImageSwiperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSwiperTests.swift; sourceTree = "<group>"; };
+		DE8DD8C51FFC697400A7EBD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE8DD8CA1FFC697400A7EBD0 /* ImageSwiperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageSwiperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE8DD8CE1FFC697400A7EBD0 /* ImageSwiperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSwiperUITests.swift; sourceTree = "<group>"; };
+		DE8DD8D01FFC697400A7EBD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE8DD8DD1FFC6B0200A7EBD0 /* YKIMageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKIMageContentView.swift; sourceTree = "<group>"; };
+		DE8DD8E11FFC895000A7EBD0 /* hehe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hehe.png; sourceTree = "<group>"; };
+		DE8DD8E31FFCB46000A7EBD0 /* YKImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKImageViewCell.swift; sourceTree = "<group>"; };
+		DEAB23BE1FFDC35100D7F1BC /* YKCellObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKCellObject.swift; sourceTree = "<group>"; };
+		F8AAE490A65F748F0D4DFCF4 /* Pods-ImageSwiper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSwiper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageSwiper/Pods-ImageSwiper.debug.xcconfig"; sourceTree = "<group>"; };
+		FCA3C001408ADB1C1ABEDAD9 /* Pods_ImageSwiper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSwiper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE8DD8A81FFC697400A7EBD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C703FCAC3F7D193BDDF3CC9 /* Pods_ImageSwiper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE8DD8BC1FFC697400A7EBD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE8DD8C71FFC697400A7EBD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B840FC6446BD194C141CE64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCA3C001408ADB1C1ABEDAD9 /* Pods_ImageSwiper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7C5F7C15496FE4B93E461F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8AAE490A65F748F0D4DFCF4 /* Pods-ImageSwiper.debug.xcconfig */,
+				0482BFD908EC7ACA2DF4AD2A /* Pods-ImageSwiper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DE8DD8A21FFC697400A7EBD0 = {
+			isa = PBXGroup;
+			children = (
+				DE8DD8AD1FFC697400A7EBD0 /* ImageSwiper */,
+				DE8DD8C21FFC697400A7EBD0 /* ImageSwiperTests */,
+				DE8DD8CD1FFC697400A7EBD0 /* ImageSwiperUITests */,
+				DE8DD8AC1FFC697400A7EBD0 /* Products */,
+				B7C5F7C15496FE4B93E461F8 /* Pods */,
+				3B840FC6446BD194C141CE64 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DE8DD8AC1FFC697400A7EBD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE8DD8AB1FFC697400A7EBD0 /* ImageSwiper.app */,
+				DE8DD8BF1FFC697400A7EBD0 /* ImageSwiperTests.xctest */,
+				DE8DD8CA1FFC697400A7EBD0 /* ImageSwiperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE8DD8AD1FFC697400A7EBD0 /* ImageSwiper */ = {
+			isa = PBXGroup;
+			children = (
+				DE8DD8DC1FFC6A0A00A7EBD0 /* Common */,
+				DE8DD8AE1FFC697400A7EBD0 /* AppDelegate.swift */,
+				DE8DD8B01FFC697400A7EBD0 /* ViewController.swift */,
+				DE8DD8B21FFC697400A7EBD0 /* Main.storyboard */,
+				DE8DD8B51FFC697400A7EBD0 /* Assets.xcassets */,
+				DE8DD8B71FFC697400A7EBD0 /* LaunchScreen.storyboard */,
+				DE8DD8BA1FFC697400A7EBD0 /* Info.plist */,
+			);
+			path = ImageSwiper;
+			sourceTree = "<group>";
+		};
+		DE8DD8C21FFC697400A7EBD0 /* ImageSwiperTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE8DD8C31FFC697400A7EBD0 /* ImageSwiperTests.swift */,
+				DE8DD8C51FFC697400A7EBD0 /* Info.plist */,
+			);
+			path = ImageSwiperTests;
+			sourceTree = "<group>";
+		};
+		DE8DD8CD1FFC697400A7EBD0 /* ImageSwiperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE8DD8CE1FFC697400A7EBD0 /* ImageSwiperUITests.swift */,
+				DE8DD8D01FFC697400A7EBD0 /* Info.plist */,
+			);
+			path = ImageSwiperUITests;
+			sourceTree = "<group>";
+		};
+		DE8DD8DC1FFC6A0A00A7EBD0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DE8DD8E11FFC895000A7EBD0 /* hehe.png */,
+				DE8DD8DD1FFC6B0200A7EBD0 /* YKIMageContentView.swift */,
+				DE8DD8E31FFCB46000A7EBD0 /* YKImageViewCell.swift */,
+				DEAB23BE1FFDC35100D7F1BC /* YKCellObject.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE8DD8AA1FFC697400A7EBD0 /* ImageSwiper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE8DD8D31FFC697400A7EBD0 /* Build configuration list for PBXNativeTarget "ImageSwiper" */;
+			buildPhases = (
+				F6398655E57CF904BE846997 /* [CP] Check Pods Manifest.lock */,
+				DE8DD8A71FFC697400A7EBD0 /* Sources */,
+				DE8DD8A81FFC697400A7EBD0 /* Frameworks */,
+				DE8DD8A91FFC697400A7EBD0 /* Resources */,
+				A07289E0CA0427DB8323BC93 /* [CP] Embed Pods Frameworks */,
+				D99A70D0E3D71EB897FC3D64 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageSwiper;
+			productName = ImageSwiper;
+			productReference = DE8DD8AB1FFC697400A7EBD0 /* ImageSwiper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE8DD8BE1FFC697400A7EBD0 /* ImageSwiperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE8DD8D61FFC697400A7EBD0 /* Build configuration list for PBXNativeTarget "ImageSwiperTests" */;
+			buildPhases = (
+				DE8DD8BB1FFC697400A7EBD0 /* Sources */,
+				DE8DD8BC1FFC697400A7EBD0 /* Frameworks */,
+				DE8DD8BD1FFC697400A7EBD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE8DD8C11FFC697400A7EBD0 /* PBXTargetDependency */,
+			);
+			name = ImageSwiperTests;
+			productName = ImageSwiperTests;
+			productReference = DE8DD8BF1FFC697400A7EBD0 /* ImageSwiperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE8DD8C91FFC697400A7EBD0 /* ImageSwiperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE8DD8D91FFC697400A7EBD0 /* Build configuration list for PBXNativeTarget "ImageSwiperUITests" */;
+			buildPhases = (
+				DE8DD8C61FFC697400A7EBD0 /* Sources */,
+				DE8DD8C71FFC697400A7EBD0 /* Frameworks */,
+				DE8DD8C81FFC697400A7EBD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE8DD8CC1FFC697400A7EBD0 /* PBXTargetDependency */,
+			);
+			name = ImageSwiperUITests;
+			productName = ImageSwiperUITests;
+			productReference = DE8DD8CA1FFC697400A7EBD0 /* ImageSwiperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE8DD8A31FFC697400A7EBD0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "康林";
+				TargetAttributes = {
+					DE8DD8AA1FFC697400A7EBD0 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					DE8DD8BE1FFC697400A7EBD0 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE8DD8AA1FFC697400A7EBD0;
+					};
+					DE8DD8C91FFC697400A7EBD0 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE8DD8AA1FFC697400A7EBD0;
+					};
+				};
+			};
+			buildConfigurationList = DE8DD8A61FFC697400A7EBD0 /* Build configuration list for PBXProject "ImageSwiper" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE8DD8A21FFC697400A7EBD0;
+			productRefGroup = DE8DD8AC1FFC697400A7EBD0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE8DD8AA1FFC697400A7EBD0 /* ImageSwiper */,
+				DE8DD8BE1FFC697400A7EBD0 /* ImageSwiperTests */,
+				DE8DD8C91FFC697400A7EBD0 /* ImageSwiperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE8DD8A91FFC697400A7EBD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE8DD8B91FFC697400A7EBD0 /* LaunchScreen.storyboard in Resources */,
+				DE8DD8E21FFC895000A7EBD0 /* hehe.png in Resources */,
+				DE8DD8B61FFC697400A7EBD0 /* Assets.xcassets in Resources */,
+				DE8DD8B41FFC697400A7EBD0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE8DD8BD1FFC697400A7EBD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE8DD8C81FFC697400A7EBD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A07289E0CA0427DB8323BC93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ImageSwiper/Pods-ImageSwiper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageSwiper/Pods-ImageSwiper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D99A70D0E3D71EB897FC3D64 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageSwiper/Pods-ImageSwiper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6398655E57CF904BE846997 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageSwiper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE8DD8A71FFC697400A7EBD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE8DD8DE1FFC6B0200A7EBD0 /* YKIMageContentView.swift in Sources */,
+				DE8DD8B11FFC697400A7EBD0 /* ViewController.swift in Sources */,
+				DEAB23BF1FFDC35100D7F1BC /* YKCellObject.swift in Sources */,
+				DE8DD8E41FFCB46000A7EBD0 /* YKImageViewCell.swift in Sources */,
+				DE8DD8AF1FFC697400A7EBD0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE8DD8BB1FFC697400A7EBD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE8DD8C41FFC697400A7EBD0 /* ImageSwiperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE8DD8C61FFC697400A7EBD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE8DD8CF1FFC697400A7EBD0 /* ImageSwiperUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE8DD8C11FFC697400A7EBD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE8DD8AA1FFC697400A7EBD0 /* ImageSwiper */;
+			targetProxy = DE8DD8C01FFC697400A7EBD0 /* PBXContainerItemProxy */;
+		};
+		DE8DD8CC1FFC697400A7EBD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE8DD8AA1FFC697400A7EBD0 /* ImageSwiper */;
+			targetProxy = DE8DD8CB1FFC697400A7EBD0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE8DD8B21FFC697400A7EBD0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE8DD8B31FFC697400A7EBD0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE8DD8B71FFC697400A7EBD0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE8DD8B81FFC697400A7EBD0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE8DD8D11FFC697400A7EBD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE8DD8D21FFC697400A7EBD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE8DD8D41FFC697400A7EBD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8AAE490A65F748F0D4DFCF4 /* Pods-ImageSwiper.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZW573C3S9X;
+				INFOPLIST_FILE = ImageSwiper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.ImageSwiper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE8DD8D51FFC697400A7EBD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0482BFD908EC7ACA2DF4AD2A /* Pods-ImageSwiper.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZW573C3S9X;
+				INFOPLIST_FILE = ImageSwiper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.ImageSwiper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DE8DD8D71FFC697400A7EBD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZW573C3S9X;
+				INFOPLIST_FILE = ImageSwiperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.ImageSwiperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageSwiper.app/ImageSwiper";
+			};
+			name = Debug;
+		};
+		DE8DD8D81FFC697400A7EBD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZW573C3S9X;
+				INFOPLIST_FILE = ImageSwiperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.ImageSwiperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageSwiper.app/ImageSwiper";
+			};
+			name = Release;
+		};
+		DE8DD8DA1FFC697400A7EBD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZW573C3S9X;
+				INFOPLIST_FILE = ImageSwiperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.ImageSwiperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageSwiper;
+			};
+			name = Debug;
+		};
+		DE8DD8DB1FFC697400A7EBD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZW573C3S9X;
+				INFOPLIST_FILE = ImageSwiperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.ImageSwiperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageSwiper;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE8DD8A61FFC697400A7EBD0 /* Build configuration list for PBXProject "ImageSwiper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE8DD8D11FFC697400A7EBD0 /* Debug */,
+				DE8DD8D21FFC697400A7EBD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE8DD8D31FFC697400A7EBD0 /* Build configuration list for PBXNativeTarget "ImageSwiper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE8DD8D41FFC697400A7EBD0 /* Debug */,
+				DE8DD8D51FFC697400A7EBD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE8DD8D61FFC697400A7EBD0 /* Build configuration list for PBXNativeTarget "ImageSwiperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE8DD8D71FFC697400A7EBD0 /* Debug */,
+				DE8DD8D81FFC697400A7EBD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE8DD8D91FFC697400A7EBD0 /* Build configuration list for PBXNativeTarget "ImageSwiperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE8DD8DA1FFC697400A7EBD0 /* Debug */,
+				DE8DD8DB1FFC697400A7EBD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE8DD8A31FFC697400A7EBD0 /* Project object */;
+}
