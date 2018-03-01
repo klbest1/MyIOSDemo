@@ -1,0 +1,711 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE5236492047D2AB00AEF536 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5236482047D2AB00AEF536 /* ImageTableViewCell.swift */; };
+		DE793A2A2044F7D200C2F128 /* YKMediaScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE793A292044F7D200C2F128 /* YKMediaScrollerView.swift */; };
+		DE793A2F2045003000C2F128 /* YKMediaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE793A2E2045003000C2F128 /* YKMediaObject.swift */; };
+		DE93471F20439E6B0094E6F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE93471E20439E6B0094E6F3 /* AppDelegate.swift */; };
+		DE93472120439E6B0094E6F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE93472020439E6B0094E6F3 /* ViewController.swift */; };
+		DE93472420439E6B0094E6F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE93472220439E6B0094E6F3 /* Main.storyboard */; };
+		DE93472620439E6B0094E6F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE93472520439E6B0094E6F3 /* Assets.xcassets */; };
+		DE93472920439E6B0094E6F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE93472720439E6B0094E6F3 /* LaunchScreen.storyboard */; };
+		DE93473420439E6B0094E6F3 /* YKPhotoMediaBroswerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE93473320439E6B0094E6F3 /* YKPhotoMediaBroswerTests.swift */; };
+		DE93473F20439E6B0094E6F3 /* YKPhotoMediaBroswerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE93473E20439E6B0094E6F3 /* YKPhotoMediaBroswerUITests.swift */; };
+		DE9347502043AA560094E6F3 /* YKPageDotContol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE93474F2043AA560094E6F3 /* YKPageDotContol.swift */; };
+		DE9347532043E65D0094E6F3 /* YKMediaZoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9347522043E65D0094E6F3 /* YKMediaZoomView.swift */; };
+		DE9347592043F6E20094E6F3 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9347562043F6E20094E6F3 /* DALabeledCircularProgressView.m */; };
+		DE93475A2043F6E20094E6F3 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9347572043F6E20094E6F3 /* DACircularProgressView.m */; };
+		DE9347602043FAC60094E6F3 /* YKTouchImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE93475F2043FAC60094E6F3 /* YKTouchImageView.swift */; };
+		DEB412D62048043900F3A013 /* LYSheetCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB412D42048043900F3A013 /* LYSheetCustom.m */; };
+		EF8336422F00D36055519452 /* libPods-YKPhotoMediaBroswer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD82FF0F80D924536B751F38 /* libPods-YKPhotoMediaBroswer.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE93473020439E6B0094E6F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE93471320439E6B0094E6F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE93471A20439E6B0094E6F3;
+			remoteInfo = YKPhotoMediaBroswer;
+		};
+		DE93473B20439E6B0094E6F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE93471320439E6B0094E6F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE93471A20439E6B0094E6F3;
+			remoteInfo = YKPhotoMediaBroswer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5C8511E37E372B7AF2DD6E5A /* Pods-YKPhotoMediaBroswer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YKPhotoMediaBroswer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YKPhotoMediaBroswer/Pods-YKPhotoMediaBroswer.debug.xcconfig"; sourceTree = "<group>"; };
+		624B7550CACA16332384AA4A /* Pods-YKPhotoMediaBroswer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YKPhotoMediaBroswer.release.xcconfig"; path = "Pods/Target Support Files/Pods-YKPhotoMediaBroswer/Pods-YKPhotoMediaBroswer.release.xcconfig"; sourceTree = "<group>"; };
+		DD82FF0F80D924536B751F38 /* libPods-YKPhotoMediaBroswer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YKPhotoMediaBroswer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE5236482047D2AB00AEF536 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		DE793A292044F7D200C2F128 /* YKMediaScrollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMediaScrollerView.swift; sourceTree = "<group>"; };
+		DE793A2E2045003000C2F128 /* YKMediaObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMediaObject.swift; sourceTree = "<group>"; };
+		DE93471B20439E6B0094E6F3 /* YKPhotoMediaBroswer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YKPhotoMediaBroswer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE93471E20439E6B0094E6F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE93472020439E6B0094E6F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE93472320439E6B0094E6F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE93472520439E6B0094E6F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE93472820439E6B0094E6F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE93472A20439E6B0094E6F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE93472F20439E6B0094E6F3 /* YKPhotoMediaBroswerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YKPhotoMediaBroswerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE93473320439E6B0094E6F3 /* YKPhotoMediaBroswerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKPhotoMediaBroswerTests.swift; sourceTree = "<group>"; };
+		DE93473520439E6B0094E6F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE93473A20439E6B0094E6F3 /* YKPhotoMediaBroswerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YKPhotoMediaBroswerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE93473E20439E6B0094E6F3 /* YKPhotoMediaBroswerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKPhotoMediaBroswerUITests.swift; sourceTree = "<group>"; };
+		DE93474020439E6B0094E6F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE93474F2043AA560094E6F3 /* YKPageDotContol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKPageDotContol.swift; sourceTree = "<group>"; };
+		DE9347522043E65D0094E6F3 /* YKMediaZoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMediaZoomView.swift; sourceTree = "<group>"; };
+		DE9347542043F6E10094E6F3 /* YKPhotoMediaBroswer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YKPhotoMediaBroswer-Bridging-Header.h"; sourceTree = "<group>"; };
+		DE9347552043F6E10094E6F3 /* DACircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DACircularProgressView.h; sourceTree = "<group>"; };
+		DE9347562043F6E20094E6F3 /* DALabeledCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALabeledCircularProgressView.m; sourceTree = "<group>"; };
+		DE9347572043F6E20094E6F3 /* DACircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACircularProgressView.m; sourceTree = "<group>"; };
+		DE9347582043F6E20094E6F3 /* DALabeledCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DALabeledCircularProgressView.h; sourceTree = "<group>"; };
+		DE93475D2043F9B30094E6F3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DE93475E2043F9DA0094E6F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DE93475F2043FAC60094E6F3 /* YKTouchImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKTouchImageView.swift; sourceTree = "<group>"; };
+		DEB412D42048043900F3A013 /* LYSheetCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSheetCustom.m; sourceTree = "<group>"; };
+		DEB412D52048043900F3A013 /* LYSheetCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSheetCustom.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE93471820439E6B0094E6F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF8336422F00D36055519452 /* libPods-YKPhotoMediaBroswer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE93472C20439E6B0094E6F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE93473720439E6B0094E6F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23964D23C4BBCA3554217AF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C8511E37E372B7AF2DD6E5A /* Pods-YKPhotoMediaBroswer.debug.xcconfig */,
+				624B7550CACA16332384AA4A /* Pods-YKPhotoMediaBroswer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DE93471220439E6B0094E6F3 = {
+			isa = PBXGroup;
+			children = (
+				DE93471D20439E6B0094E6F3 /* YKPhotoMediaBroswer */,
+				DE93473220439E6B0094E6F3 /* YKPhotoMediaBroswerTests */,
+				DE93473D20439E6B0094E6F3 /* YKPhotoMediaBroswerUITests */,
+				DE93471C20439E6B0094E6F3 /* Products */,
+				DE93475C2043F9B20094E6F3 /* Frameworks */,
+				23964D23C4BBCA3554217AF6 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		DE93471C20439E6B0094E6F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE93471B20439E6B0094E6F3 /* YKPhotoMediaBroswer.app */,
+				DE93472F20439E6B0094E6F3 /* YKPhotoMediaBroswerTests.xctest */,
+				DE93473A20439E6B0094E6F3 /* YKPhotoMediaBroswerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE93471D20439E6B0094E6F3 /* YKPhotoMediaBroswer */ = {
+			isa = PBXGroup;
+			children = (
+				DE93475B2043F72C0094E6F3 /* Progress */,
+				DE9347512043AA650094E6F3 /* Common */,
+				DE93471E20439E6B0094E6F3 /* AppDelegate.swift */,
+				DE93472020439E6B0094E6F3 /* ViewController.swift */,
+				DE5236482047D2AB00AEF536 /* ImageTableViewCell.swift */,
+				DE93472220439E6B0094E6F3 /* Main.storyboard */,
+				DE93472520439E6B0094E6F3 /* Assets.xcassets */,
+				DE93472720439E6B0094E6F3 /* LaunchScreen.storyboard */,
+				DE93472A20439E6B0094E6F3 /* Info.plist */,
+				DE9347542043F6E10094E6F3 /* YKPhotoMediaBroswer-Bridging-Header.h */,
+			);
+			path = YKPhotoMediaBroswer;
+			sourceTree = "<group>";
+		};
+		DE93473220439E6B0094E6F3 /* YKPhotoMediaBroswerTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE93473320439E6B0094E6F3 /* YKPhotoMediaBroswerTests.swift */,
+				DE93473520439E6B0094E6F3 /* Info.plist */,
+			);
+			path = YKPhotoMediaBroswerTests;
+			sourceTree = "<group>";
+		};
+		DE93473D20439E6B0094E6F3 /* YKPhotoMediaBroswerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE93473E20439E6B0094E6F3 /* YKPhotoMediaBroswerUITests.swift */,
+				DE93474020439E6B0094E6F3 /* Info.plist */,
+			);
+			path = YKPhotoMediaBroswerUITests;
+			sourceTree = "<group>";
+		};
+		DE9347512043AA650094E6F3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DE93474F2043AA560094E6F3 /* YKPageDotContol.swift */,
+				DE9347522043E65D0094E6F3 /* YKMediaZoomView.swift */,
+				DE93475F2043FAC60094E6F3 /* YKTouchImageView.swift */,
+				DE793A292044F7D200C2F128 /* YKMediaScrollerView.swift */,
+				DE793A2E2045003000C2F128 /* YKMediaObject.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DE93475B2043F72C0094E6F3 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				DE9347552043F6E10094E6F3 /* DACircularProgressView.h */,
+				DE9347572043F6E20094E6F3 /* DACircularProgressView.m */,
+				DEB412D52048043900F3A013 /* LYSheetCustom.h */,
+				DEB412D42048043900F3A013 /* LYSheetCustom.m */,
+				DE9347582043F6E20094E6F3 /* DALabeledCircularProgressView.h */,
+				DE9347562043F6E20094E6F3 /* DALabeledCircularProgressView.m */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		DE93475C2043F9B20094E6F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE93475E2043F9DA0094E6F3 /* QuartzCore.framework */,
+				DE93475D2043F9B30094E6F3 /* CoreGraphics.framework */,
+				DD82FF0F80D924536B751F38 /* libPods-YKPhotoMediaBroswer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE93471A20439E6B0094E6F3 /* YKPhotoMediaBroswer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE93474320439E6B0094E6F3 /* Build configuration list for PBXNativeTarget "YKPhotoMediaBroswer" */;
+			buildPhases = (
+				B847D4CE4670AAC5133D7F5E /* [CP] Check Pods Manifest.lock */,
+				DE93471720439E6B0094E6F3 /* Sources */,
+				DE93471820439E6B0094E6F3 /* Frameworks */,
+				DE93471920439E6B0094E6F3 /* Resources */,
+				6A74EB9FE9360C18D1017257 /* [CP] Embed Pods Frameworks */,
+				4752F8DAD34795056F2E7DEE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YKPhotoMediaBroswer;
+			productName = YKPhotoMediaBroswer;
+			productReference = DE93471B20439E6B0094E6F3 /* YKPhotoMediaBroswer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE93472E20439E6B0094E6F3 /* YKPhotoMediaBroswerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE93474620439E6B0094E6F3 /* Build configuration list for PBXNativeTarget "YKPhotoMediaBroswerTests" */;
+			buildPhases = (
+				DE93472B20439E6B0094E6F3 /* Sources */,
+				DE93472C20439E6B0094E6F3 /* Frameworks */,
+				DE93472D20439E6B0094E6F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE93473120439E6B0094E6F3 /* PBXTargetDependency */,
+			);
+			name = YKPhotoMediaBroswerTests;
+			productName = YKPhotoMediaBroswerTests;
+			productReference = DE93472F20439E6B0094E6F3 /* YKPhotoMediaBroswerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE93473920439E6B0094E6F3 /* YKPhotoMediaBroswerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE93474920439E6B0094E6F3 /* Build configuration list for PBXNativeTarget "YKPhotoMediaBroswerUITests" */;
+			buildPhases = (
+				DE93473620439E6B0094E6F3 /* Sources */,
+				DE93473720439E6B0094E6F3 /* Frameworks */,
+				DE93473820439E6B0094E6F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE93473C20439E6B0094E6F3 /* PBXTargetDependency */,
+			);
+			name = YKPhotoMediaBroswerUITests;
+			productName = YKPhotoMediaBroswerUITests;
+			productReference = DE93473A20439E6B0094E6F3 /* YKPhotoMediaBroswerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE93471320439E6B0094E6F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "康林";
+				TargetAttributes = {
+					DE93471A20439E6B0094E6F3 = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					DE93472E20439E6B0094E6F3 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE93471A20439E6B0094E6F3;
+					};
+					DE93473920439E6B0094E6F3 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE93471A20439E6B0094E6F3;
+					};
+				};
+			};
+			buildConfigurationList = DE93471620439E6B0094E6F3 /* Build configuration list for PBXProject "YKPhotoMediaBroswer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE93471220439E6B0094E6F3;
+			productRefGroup = DE93471C20439E6B0094E6F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE93471A20439E6B0094E6F3 /* YKPhotoMediaBroswer */,
+				DE93472E20439E6B0094E6F3 /* YKPhotoMediaBroswerTests */,
+				DE93473920439E6B0094E6F3 /* YKPhotoMediaBroswerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE93471920439E6B0094E6F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE93472920439E6B0094E6F3 /* LaunchScreen.storyboard in Resources */,
+				DE93472620439E6B0094E6F3 /* Assets.xcassets in Resources */,
+				DE93472420439E6B0094E6F3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE93472D20439E6B0094E6F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE93473820439E6B0094E6F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4752F8DAD34795056F2E7DEE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YKPhotoMediaBroswer/Pods-YKPhotoMediaBroswer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A74EB9FE9360C18D1017257 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YKPhotoMediaBroswer/Pods-YKPhotoMediaBroswer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B847D4CE4670AAC5133D7F5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YKPhotoMediaBroswer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE93471720439E6B0094E6F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEB412D62048043900F3A013 /* LYSheetCustom.m in Sources */,
+				DE9347502043AA560094E6F3 /* YKPageDotContol.swift in Sources */,
+				DE793A2A2044F7D200C2F128 /* YKMediaScrollerView.swift in Sources */,
+				DE93475A2043F6E20094E6F3 /* DACircularProgressView.m in Sources */,
+				DE93472120439E6B0094E6F3 /* ViewController.swift in Sources */,
+				DE9347602043FAC60094E6F3 /* YKTouchImageView.swift in Sources */,
+				DE93471F20439E6B0094E6F3 /* AppDelegate.swift in Sources */,
+				DE793A2F2045003000C2F128 /* YKMediaObject.swift in Sources */,
+				DE5236492047D2AB00AEF536 /* ImageTableViewCell.swift in Sources */,
+				DE9347532043E65D0094E6F3 /* YKMediaZoomView.swift in Sources */,
+				DE9347592043F6E20094E6F3 /* DALabeledCircularProgressView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE93472B20439E6B0094E6F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE93473420439E6B0094E6F3 /* YKPhotoMediaBroswerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE93473620439E6B0094E6F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE93473F20439E6B0094E6F3 /* YKPhotoMediaBroswerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE93473120439E6B0094E6F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE93471A20439E6B0094E6F3 /* YKPhotoMediaBroswer */;
+			targetProxy = DE93473020439E6B0094E6F3 /* PBXContainerItemProxy */;
+		};
+		DE93473C20439E6B0094E6F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE93471A20439E6B0094E6F3 /* YKPhotoMediaBroswer */;
+			targetProxy = DE93473B20439E6B0094E6F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE93472220439E6B0094E6F3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE93472320439E6B0094E6F3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE93472720439E6B0094E6F3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE93472820439E6B0094E6F3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE93474120439E6B0094E6F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE93474220439E6B0094E6F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE93474420439E6B0094E6F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C8511E37E372B7AF2DD6E5A /* Pods-YKPhotoMediaBroswer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q8C2NBM6JK;
+				INFOPLIST_FILE = YKPhotoMediaBroswer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.YKPhotoMediaBroswer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YKPhotoMediaBroswer/YKPhotoMediaBroswer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE93474520439E6B0094E6F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 624B7550CACA16332384AA4A /* Pods-YKPhotoMediaBroswer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q8C2NBM6JK;
+				INFOPLIST_FILE = YKPhotoMediaBroswer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.YKPhotoMediaBroswer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YKPhotoMediaBroswer/YKPhotoMediaBroswer-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DE93474720439E6B0094E6F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YKPhotoMediaBroswerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.YKPhotoMediaBroswerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YKPhotoMediaBroswer.app/YKPhotoMediaBroswer";
+			};
+			name = Debug;
+		};
+		DE93474820439E6B0094E6F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YKPhotoMediaBroswerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.YKPhotoMediaBroswerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YKPhotoMediaBroswer.app/YKPhotoMediaBroswer";
+			};
+			name = Release;
+		};
+		DE93474A20439E6B0094E6F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YKPhotoMediaBroswerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.YKPhotoMediaBroswerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YKPhotoMediaBroswer;
+			};
+			name = Debug;
+		};
+		DE93474B20439E6B0094E6F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YKPhotoMediaBroswerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.YKPhotoMediaBroswerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YKPhotoMediaBroswer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE93471620439E6B0094E6F3 /* Build configuration list for PBXProject "YKPhotoMediaBroswer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE93474120439E6B0094E6F3 /* Debug */,
+				DE93474220439E6B0094E6F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE93474320439E6B0094E6F3 /* Build configuration list for PBXNativeTarget "YKPhotoMediaBroswer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE93474420439E6B0094E6F3 /* Debug */,
+				DE93474520439E6B0094E6F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE93474620439E6B0094E6F3 /* Build configuration list for PBXNativeTarget "YKPhotoMediaBroswerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE93474720439E6B0094E6F3 /* Debug */,
+				DE93474820439E6B0094E6F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE93474920439E6B0094E6F3 /* Build configuration list for PBXNativeTarget "YKPhotoMediaBroswerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE93474A20439E6B0094E6F3 /* Debug */,
+				DE93474B20439E6B0094E6F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE93471320439E6B0094E6F3 /* Project object */;
+}
