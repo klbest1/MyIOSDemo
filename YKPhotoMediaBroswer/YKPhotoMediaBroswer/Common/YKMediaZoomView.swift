@@ -48,9 +48,9 @@ class YKMediaZoomView: UIView {
     var animateAtFirstShowOut = false
 
     fileprivate let scrollView:UIScrollView = UIScrollView()
-    fileprivate let zoomImageView:YKTouchImageView = YKTouchImageView(frame: CGRect.zero)
+    fileprivate var zoomImageView:YKTouchImageView = YKTouchImageView(frame: CGRect.zero)
     //用来手势滑动计算位置
-    fileprivate var imageZoomedFrame:CGRect?
+    fileprivate var zoomedFrame:CGRect?
     
     fileprivate var preGuestureTouch:CGPoint?
     fileprivate var panGuestureSouldReceiveTouch = false
@@ -86,21 +86,31 @@ class YKMediaZoomView: UIView {
             }
         }
         
-        //图片完成加载
+        //图片完成加载 
         zoomImageView.imageComplete = { (image) in
             self.scrollView.contentSize = image.size;
             self.zoomImageView.frame = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
             let widhtScale = self.bounds.size.width/image.size.width
             let hegithScale = self.bounds.size.height/image.size.height
-            let miniScale = min(widhtScale, hegithScale)
+            var miniScale = min(widhtScale, hegithScale)
+            //纵向长图或者横向长图显示
+            if widhtScale / hegithScale > 3 {
+                miniScale = widhtScale;
+            }else if hegithScale/widhtScale > 3{
+                miniScale = hegithScale
+            }
             self.scrollView.minimumZoomScale = miniScale
             self.scrollView.maximumZoomScale = 1
             self.scrollView.zoomScale = miniScale
             self.scrollView.addSubview(self.zoomImageView)
-            self.imageZoomedFrame = self.zoomImageView.frame;
-
+            
+            self.zoomedFrame = self.zoomImageView.frame;
             self.setNeedsLayout()
             self.layoutIfNeeded()
+            
+            //由于gif图无法一开始zoom，没有调用layout居中图片，导致收拾滑动时，zoomedFrame Origin为（0，0）
+            self.zoomedFrame = self.zoomImageView.frame;
+            //所以居中后再调用一次
         }
         
         self.backgroundColor = UIColor.black
@@ -133,10 +143,10 @@ class YKMediaZoomView: UIView {
             
         }
         
-        if sender.state == .changed  && imageZoomedFrame != nil{
+        if sender.state == .changed  && zoomedFrame != nil{
             let translation = sender.translation(in: self);
             let movingDistance = sqrt(translation.x*translation.x + translation.y*translation.y)
-            let movingCenter = CGPoint(x: imageZoomedFrame!.midX + translation.x, y: imageZoomedFrame!.midY + translation.y)
+            let movingCenter = CGPoint(x: zoomedFrame!.midX + translation.x, y: zoomedFrame!.midY + translation.y)
             let ratio = movingDistance/300.0
 
             zoomImageView.center = movingCenter
@@ -145,19 +155,19 @@ class YKMediaZoomView: UIView {
             if sizeRatio < 0.6{
                 sizeRatio = 0.6
             }
-            imageFrame.size.width = imageZoomedFrame!.size.width * (sizeRatio)
-            imageFrame.size.height = imageZoomedFrame!.size.height * (sizeRatio)
+            imageFrame.size.width = zoomedFrame!.size.width * (sizeRatio)
+            imageFrame.size.height = zoomedFrame!.size.height * (sizeRatio)
             zoomImageView.frame = imageFrame;
             self.backgroundColor = UIColor.black.withAlphaComponent((1-ratio*3))
             self.superview?.backgroundColor = UIColor.black.withAlphaComponent((1-ratio*3))
         }
         
-        if sender.state == .ended  && imageZoomedFrame != nil{
-            if zoomImageView.center.y - imageZoomedFrame!.midY > 50{
+        if sender.state == .ended  && zoomedFrame != nil{
+            if zoomImageView.center.y - zoomedFrame!.midY > 50{
                 removePage()
             }else{
                 UIView.animate(withDuration: 0.3, animations: {
-                    self.zoomImageView.frame = self.imageZoomedFrame!
+                    self.zoomImageView.frame = self.zoomedFrame!
                     self.backgroundColor = UIColor.black.withAlphaComponent((1))
                     self.superview?.backgroundColor = UIColor.black.withAlphaComponent((1))
                 })
@@ -197,7 +207,7 @@ class YKMediaZoomView: UIView {
         }
         self.backgroundColor = UIColor.clear
         self.superview?.backgroundColor = UIColor.clear
-//        self.scrollView.zoomScale = self.scrollView.minimumZoomScale
+        self.progressView.isHidden = true
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
             if let fromView = self.mediaOb?.fromView {
                 let fromRect = fromView.convert(fromView.bounds, to: self.scrollView)
@@ -217,16 +227,26 @@ class YKMediaZoomView: UIView {
         self.scrollView.minimumZoomScale = 1
         self.scrollView.contentSize = CGSize.zero
         self.index = object.index
-        mediaType = MediaType.findType(path: object.path ?? "")
-        if mediaType == MediaType.MediaTypeImage {
-            zoomImageView.setImage(path: object.path ?? "")
+        if let path = object.path {
+            mediaType = MediaType.findType(path: object.path ?? "")
+            if mediaType == MediaType.MediaTypeImage {
+                zoomImageView.setImage(path: path)
+            }
+            
+        }else if let asset = object.imageAsset{
+            if asset.mediaType == .image{
+                mediaType = MediaType.MediaTypeImage
+                zoomImageView.setImage(asset: asset)
+            }
         }
+        
     }
     
     func clearContent()  {
-        zoomImageView.image = nil;
+        zoomImageView.image = nil
+        zoomImageView.frame = CGRect.zero
+        zoomedFrame = nil;
     }
-    
     
     func centerImage()  {
         var imageFrame = self.zoomImageView.frame
@@ -249,13 +269,13 @@ class YKMediaZoomView: UIView {
         progressView.center = CGPoint(x: self.bounds.size.width/2, y: self.bounds.size.height/2)
         self.scrollView.frame = self.bounds
         
-        if animateAtFirstShowOut,  let fromView = self.mediaOb?.fromView,self.imageZoomedFrame != nil{
+        if animateAtFirstShowOut,  let fromView = self.mediaOb?.fromView,self.zoomedFrame != nil{
             //首次出现是否显示展开动画
             let fromRect = fromView.convert(fromView.bounds, to: self.scrollView)
             
             self.zoomImageView.frame = fromRect;
             UIView.animate(withDuration: 0.3, animations: {
-                self.zoomImageView.frame = self.imageZoomedFrame!
+                self.zoomImageView.frame = self.zoomedFrame!
                 self.centerImage()
             }, completion: { (finish) in
                 self.animateAtFirstShowOut = false;
@@ -281,7 +301,7 @@ extension YKMediaZoomView:UIScrollViewDelegate{
     }
     
     func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
-        imageZoomedFrame = self.zoomImageView.frame;
+        zoomedFrame = self.zoomImageView.frame;
         isZooming = false
     }
     

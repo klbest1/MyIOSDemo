@@ -9,12 +9,28 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "YKPhotoMediaBroswer/Common/YKTouchImageView.swift"
-            timestampString = "541583594.580438"
+            filePath = "YKPhotoMediaBroswer/Common/YKMediaZoomView.swift"
+            timestampString = "541676984.01037"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
+            landmarkName = "centerImage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YKPhotoMediaBroswer/Common/YKMediaZoomView.swift"
+            timestampString = "541676984.010469"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
             landmarkName = "layoutSubviews()"
             landmarkType = "7">
          </BreakpointContent>

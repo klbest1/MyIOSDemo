@@ -2,6 +2,7 @@ platform :ios, '8.0'
 
 # 每次更新后，需要把SVRPogressHud 和 StylePageControl 设置 为 ARC
 target 'YKPhotoMediaBroswer' do
-pod 'SDWebImage', '~> 4.0'
+pod 'SDWebImage'
+pod 'SDWebImage/GIF'
 end
 

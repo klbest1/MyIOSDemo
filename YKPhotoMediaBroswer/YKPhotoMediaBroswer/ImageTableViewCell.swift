@@ -10,9 +10,9 @@ import UIKit
 
 class ImageTableViewCell: UITableViewCell {
 
-    let button1:UIButton = UIButton()
-    let button2 = UIButton()
-    let button3 = UIButton()
+    let button1:YKGifButton = YKGifButton()
+    let button2 = YKGifButton()
+    let button3 = YKGifButton()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

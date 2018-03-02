@@ -31,6 +31,7 @@ class YKMediaScrollerView: UIView {
     fileprivate var numberOfPages:Int = 0
     fileprivate var dataSoucre:[YKMediaObject]!
     fileprivate var pageController:YKPageDotContol!
+    fileprivate var animateAtFirstShowOut = false
     
     let PagePadding:CGFloat = 10;
     
@@ -43,6 +44,7 @@ class YKMediaScrollerView: UIView {
         scrollerView.backgroundColor = UIColor.black
         self.addSubview(scrollerView)
         
+        SDWebImageCodersManager.sharedInstance().addCoder(SDWebImageGIFCoder.shared())
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -70,6 +72,7 @@ class YKMediaScrollerView: UIView {
         pageConfig.currentPage = CGFloat(currentIndex)
         pageController = YKPageDotContol(config: pageConfig)
         pageController.addTarget(self, action: #selector(pageValueChanged(_:)), for: .valueChanged)
+        if dataSource.count == 1{pageController.isHidden = true}
         self.addSubview(pageController)
         
         scrollerView.contentSize = CGSize(width: (self.bounds.size.width + PagePadding * 2) *  CGFloat( dataSource.count ), height: self.bounds.size.height)
@@ -77,8 +80,7 @@ class YKMediaScrollerView: UIView {
         self.layoutIfNeeded()
         //滑倒当前页面去
         scrollToPageAtIndex(index: currentIndex-1,animate: false)
-        let zoomer = getZoomerAtIndex(index: currentIndex-1)
-        zoomer?.animateAtFirstShowOut = true;
+        animateAtFirstShowOut = true;
     }
     
     fileprivate func scrollToPageAtIndex(index:Int,animate:Bool)  {
@@ -146,8 +148,9 @@ class YKMediaScrollerView: UIView {
         }
         let zoomerView = dequeReuseAbleZoomber()
         //初次展开时，设置展开动画
-        if visibleZoomer.count == 0 {
-//            zoomerView.animateAtFirstShowOut = true
+        if visibleZoomer.count == 0 && animateAtFirstShowOut{
+            zoomerView.animateAtFirstShowOut = animateAtFirstShowOut
+            animateAtFirstShowOut = false
         }
         scrollerView.addSubview(zoomerView)
         zoomerView.frame = getAddRoomRect(index: item.index)

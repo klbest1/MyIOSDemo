@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DE5236492047D2AB00AEF536 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5236482047D2AB00AEF536 /* ImageTableViewCell.swift */; };
+		DE58CB0B2049278200D2BC67 /* YKGifButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58CB0A2049278200D2BC67 /* YKGifButton.swift */; };
+		DE58CB0D20492EE400D2BC67 /* local.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE58CB0C20492EE400D2BC67 /* local.jpg */; };
+		DE58CB0F204933D200D2BC67 /* local1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE58CB0E204933D200D2BC67 /* local1.jpg */; };
 		DE793A2A2044F7D200C2F128 /* YKMediaScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE793A292044F7D200C2F128 /* YKMediaScrollerView.swift */; };
 		DE793A2F2045003000C2F128 /* YKMediaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE793A2E2045003000C2F128 /* YKMediaObject.swift */; };
 		DE93471F20439E6B0094E6F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE93471E20439E6B0094E6F3 /* AppDelegate.swift */; };
@@ -48,6 +51,9 @@
 		624B7550CACA16332384AA4A /* Pods-YKPhotoMediaBroswer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YKPhotoMediaBroswer.release.xcconfig"; path = "Pods/Target Support Files/Pods-YKPhotoMediaBroswer/Pods-YKPhotoMediaBroswer.release.xcconfig"; sourceTree = "<group>"; };
 		DD82FF0F80D924536B751F38 /* libPods-YKPhotoMediaBroswer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YKPhotoMediaBroswer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5236482047D2AB00AEF536 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		DE58CB0A2049278200D2BC67 /* YKGifButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKGifButton.swift; sourceTree = "<group>"; };
+		DE58CB0C20492EE400D2BC67 /* local.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = local.jpg; sourceTree = "<group>"; };
+		DE58CB0E204933D200D2BC67 /* local1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = local1.jpg; sourceTree = "<group>"; };
 		DE793A292044F7D200C2F128 /* YKMediaScrollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMediaScrollerView.swift; sourceTree = "<group>"; };
 		DE793A2E2045003000C2F128 /* YKMediaObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMediaObject.swift; sourceTree = "<group>"; };
 		DE93471B20439E6B0094E6F3 /* YKPhotoMediaBroswer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YKPhotoMediaBroswer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +143,8 @@
 		DE93471D20439E6B0094E6F3 /* YKPhotoMediaBroswer */ = {
 			isa = PBXGroup;
 			children = (
+				DE58CB0C20492EE400D2BC67 /* local.jpg */,
+				DE58CB0E204933D200D2BC67 /* local1.jpg */,
 				DE93475B2043F72C0094E6F3 /* Progress */,
 				DE9347512043AA650094E6F3 /* Common */,
 				DE93471E20439E6B0094E6F3 /* AppDelegate.swift */,
@@ -177,6 +185,7 @@
 				DE93475F2043FAC60094E6F3 /* YKTouchImageView.swift */,
 				DE793A292044F7D200C2F128 /* YKMediaScrollerView.swift */,
 				DE793A2E2045003000C2F128 /* YKMediaObject.swift */,
+				DE58CB0A2049278200D2BC67 /* YKGifButton.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -318,6 +327,8 @@
 				DE93472920439E6B0094E6F3 /* LaunchScreen.storyboard in Resources */,
 				DE93472620439E6B0094E6F3 /* Assets.xcassets in Resources */,
 				DE93472420439E6B0094E6F3 /* Main.storyboard in Resources */,
+				DE58CB0F204933D200D2BC67 /* local1.jpg in Resources */,
+				DE58CB0D20492EE400D2BC67 /* local.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +406,7 @@
 			files = (
 				DEB412D62048043900F3A013 /* LYSheetCustom.m in Sources */,
 				DE9347502043AA560094E6F3 /* YKPageDotContol.swift in Sources */,
+				DE58CB0B2049278200D2BC67 /* YKGifButton.swift in Sources */,
 				DE793A2A2044F7D200C2F128 /* YKMediaScrollerView.swift in Sources */,
 				DE93475A2043F6E20094E6F3 /* DACircularProgressView.m in Sources */,
 				DE93472120439E6B0094E6F3 /* ViewController.swift in Sources */,

@@ -6,3 +6,6 @@
 #import "UIImageView+WebCache.h"
 #import "UIButton+WebCache.h"
 #import "LYSheetCustom.h"
+#import "SDWebImageCodersManager.h"
+#import "SDWebImageGIFCoder.h"
+#import "FLAnimatedImageView+WebCache.h"
