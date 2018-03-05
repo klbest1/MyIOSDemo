@@ -25,6 +25,7 @@
 		DE9347592043F6E20094E6F3 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9347562043F6E20094E6F3 /* DALabeledCircularProgressView.m */; };
 		DE93475A2043F6E20094E6F3 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9347572043F6E20094E6F3 /* DACircularProgressView.m */; };
 		DE9347602043FAC60094E6F3 /* YKTouchImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE93475F2043FAC60094E6F3 /* YKTouchImageView.swift */; };
+		DE9B13AA204D2D2C000BD32A /* YKMediaFileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9B13A9204D2D2C000BD32A /* YKMediaFileHandler.swift */; };
 		DEB412D62048043900F3A013 /* LYSheetCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB412D42048043900F3A013 /* LYSheetCustom.m */; };
 		EF8336422F00D36055519452 /* libPods-YKPhotoMediaBroswer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD82FF0F80D924536B751F38 /* libPods-YKPhotoMediaBroswer.a */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,9 @@
 		DE93475D2043F9B30094E6F3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DE93475E2043F9DA0094E6F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DE93475F2043FAC60094E6F3 /* YKTouchImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKTouchImageView.swift; sourceTree = "<group>"; };
+		DE9B13A7204D184F000BD32A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DE9B13A8204D185A000BD32A /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		DE9B13A9204D2D2C000BD32A /* YKMediaFileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMediaFileHandler.swift; sourceTree = "<group>"; };
 		DEB412D42048043900F3A013 /* LYSheetCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSheetCustom.m; sourceTree = "<group>"; };
 		DEB412D52048043900F3A013 /* LYSheetCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSheetCustom.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +190,7 @@
 				DE793A292044F7D200C2F128 /* YKMediaScrollerView.swift */,
 				DE793A2E2045003000C2F128 /* YKMediaObject.swift */,
 				DE58CB0A2049278200D2BC67 /* YKGifButton.swift */,
+				DE9B13A9204D2D2C000BD32A /* YKMediaFileHandler.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -206,6 +211,8 @@
 		DE93475C2043F9B20094E6F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DE9B13A8204D185A000BD32A /* AVKit.framework */,
+				DE9B13A7204D184F000BD32A /* AVFoundation.framework */,
 				DE93475E2043F9DA0094E6F3 /* QuartzCore.framework */,
 				DE93475D2043F9B30094E6F3 /* CoreGraphics.framework */,
 				DD82FF0F80D924536B751F38 /* libPods-YKPhotoMediaBroswer.a */,
@@ -416,6 +423,7 @@
 				DE5236492047D2AB00AEF536 /* ImageTableViewCell.swift in Sources */,
 				DE9347532043E65D0094E6F3 /* YKMediaZoomView.swift in Sources */,
 				DE9347592043F6E20094E6F3 /* DALabeledCircularProgressView.m in Sources */,
+				DE9B13AA204D2D2C000BD32A /* YKMediaFileHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

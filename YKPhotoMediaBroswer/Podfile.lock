@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - FLAnimatedImage (1.0.12)
   - SDWebImage (4.2.3):
     - SDWebImage/Core (= 4.2.3)
@@ -8,13 +23,15 @@ PODS:
     - SDWebImage/Core
 
 DEPENDENCIES:
+  - AFNetworking
   - SDWebImage
   - SDWebImage/GIF
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
 
-PODFILE CHECKSUM: a63461d7209aeb854b0320871e0f3bb5588ae225
+PODFILE CHECKSUM: 5a5022744979593526f037d8a41cd7e221a794c7
 
 COCOAPODS: 1.3.1

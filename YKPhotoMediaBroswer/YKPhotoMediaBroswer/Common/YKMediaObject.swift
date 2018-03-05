@@ -11,6 +11,7 @@ import Photos
 
 class YKMediaObject: NSObject {
     var path:String?
+    var vedioPath:String?
     var imageAsset:PHAsset?
     var index:Int = 0
     var fromView:UIView?

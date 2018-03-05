@@ -113,6 +113,15 @@ class YKMediaZoomView: UIView {
             //所以居中后再调用一次
         }
         
+        //视频加载完成
+        zoomImageView.vedioComplete = {
+            self.zoomImageView.frame = self.bounds
+            self.scrollView.addSubview(self.zoomImageView)
+            self.zoomedFrame = self.zoomImageView.frame;
+            self.setNeedsLayout()
+            self.layoutIfNeeded()
+        }
+        
         self.backgroundColor = UIColor.black
         self.addSubview(scrollView)
         

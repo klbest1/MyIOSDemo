@@ -9,3 +9,4 @@
 #import "SDWebImageCodersManager.h"
 #import "SDWebImageGIFCoder.h"
 #import "FLAnimatedImageView+WebCache.h"
+#import "AFNetworking.h"

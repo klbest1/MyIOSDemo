@@ -8,15 +8,20 @@
 
 import UIKit
 import Photos
+import AVKit
+import AVFoundation
 
 typealias GetImageComplete = (UIImage)->()
+typealias GetVedioComplete = ()->()
 typealias ImageProgress = (CGFloat)->()
 
 class YKTouchImageView: FLAnimatedImageView {
     
     var imageComplete:GetImageComplete?
+    var vedioComplete:GetVedioComplete?
     var progressClouser:ImageProgress?
     fileprivate var assetRequestID:PHImageRequestID?
+    fileprivate var playerViewController:AVPlayerViewController?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,7 +35,7 @@ class YKTouchImageView: FLAnimatedImageView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //模糊图片怎么加的？
+    //
     func setImage(path:String)  {
         if path.hasPrefix("http") {
             self.sd_setImage(with: URL(string: path), placeholderImage: nil, options: .retryFailed, progress: { [weak self] (receivedSize, expectedSize, url) in
@@ -70,5 +75,68 @@ class YKTouchImageView: FLAnimatedImageView {
             self.image = image;
             self.imageComplete?(image ?? UIImage())
         })
+    }
+    
+    //播放视频
+    func setVedio(path:String)  {
+        if playerViewController == nil {
+            playerViewController = AVPlayerViewController()
+            playerViewController?.allowsPictureInPicturePlayback = false
+            playerViewController?.showsPlaybackControls = false
+        }
+
+        var vedioURL = URL(string: path)
+        if path.hasPrefix("/var/"){
+            vedioURL =   URL(fileURLWithPath: path)
+        }
+        
+        guard vedioURL != nil else {
+            return
+        }
+        
+        if path.hasPrefix("http") {
+            if let cachePath = YKMediaFileHandler.getCacheURLPath(path: path){
+                vedioURL =   URL(fileURLWithPath: cachePath)
+                playVedioAtURL(vedioURL: vedioURL!)
+            }else{
+                let configureation = URLSessionConfiguration.default
+                let seessionManager = AFURLSessionManager(sessionConfiguration: configureation)
+                let request = URLRequest(url: vedioURL!)
+                seessionManager.downloadTask(with: request, progress: { (progress) in
+                    self.progressClouser?(CGFloat(progress.fractionCompleted))
+                }, destination: { (url, response) -> URL in
+                    let filePath = YKMediaFileHandler.getMediaVedioSavePath()
+                    return URL(fileURLWithPath: filePath).appendingPathComponent(response.suggestedFilename!)
+                }, completionHandler: { (response, url, error) in
+                    YKMediaFileHandler.cacheURLPath(path: url!.absoluteString, vedioName: response.suggestedFilename!);
+                    let filePath = YKMediaFileHandler.getMediaVedioSavePath()
+                    let localVedioURL =  URL(fileURLWithPath: filePath).appendingPathComponent(response.suggestedFilename!)
+                    self.playVedioAtURL(vedioURL: localVedioURL)
+                    self.playerViewController?.player?.play()
+                    self.vedioComplete?()
+                })
+            }
+           
+        }else{
+            playVedioAtURL(vedioURL: vedioURL!)
+        }
+       
+        NotificationCenter.default.removeObserver(self)
+        NotificationCenter.default.addObserver(self, selector: #selector(playDidEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+    }
+    
+    func playVedioAtURL(vedioURL:URL)  {
+        let playItem = AVPlayerItem(url: vedioURL)
+        let tempPlayer = AVPlayer(playerItem: playItem)
+        let playerLayer = AVPlayerLayer(player: tempPlayer)
+        playerLayer.frame = self.bounds
+        playerLayer.videoGravity = .resizeAspect
+        self.playerViewController?.player = tempPlayer
+        self.layer.addSublayer(playerLayer)
+    }
+    
+    @objc func playDidEnd(){
+        self.playerViewController?.player?.seek(to: CMTimeMake(0, 1))
+        self.playerViewController?.player?.play()
     }
 }

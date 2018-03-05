@@ -8,13 +8,6 @@
 
 import UIKit
 
-enum ScrollDirection:Int{
-    case Left = 1,
-    Right = 2,
-    Current = 3,
-    None = 4
-    
-}
 
 protocol YKMediaScrollerViewDelegate:class {
 }

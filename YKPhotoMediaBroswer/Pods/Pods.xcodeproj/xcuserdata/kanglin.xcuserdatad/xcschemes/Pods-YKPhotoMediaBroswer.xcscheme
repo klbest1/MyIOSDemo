@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CBF76AA6D3DDE7323ADFE3A597F09057'
+               BlueprintIdentifier = '2F24ABA43F69D7B8EF6EBF7BACAD5574'
                BlueprintName = 'Pods-YKPhotoMediaBroswer'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-YKPhotoMediaBroswer.a'>
