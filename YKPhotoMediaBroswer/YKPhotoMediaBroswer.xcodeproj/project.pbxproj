@@ -27,6 +27,12 @@
 		DE9347602043FAC60094E6F3 /* YKTouchImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE93475F2043FAC60094E6F3 /* YKTouchImageView.swift */; };
 		DE9B13AA204D2D2C000BD32A /* YKMediaFileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9B13A9204D2D2C000BD32A /* YKMediaFileHandler.swift */; };
 		DEB412D62048043900F3A013 /* LYSheetCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB412D42048043900F3A013 /* LYSheetCustom.m */; };
+		DEE5A529204E280F000A7869 /* PlayButtonOverlayLarge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE5A527204E280E000A7869 /* PlayButtonOverlayLarge@2x.png */; };
+		DEE5A52A204E280F000A7869 /* PlayButtonOverlayLarge@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE5A528204E280F000A7869 /* PlayButtonOverlayLarge@3x.png */; };
+		DEE5A534204E8804000A7869 /* vbg1.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE5A532204E8804000A7869 /* vbg1.png */; };
+		DEE5A535204E8804000A7869 /* vbg2.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE5A533204E8804000A7869 /* vbg2.png */; };
+		DEE5A537204E9152000A7869 /* movie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DEE5A536204E9152000A7869 /* movie.mp4 */; };
+		DEE5A539204E9CEE000A7869 /* YKWelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5A538204E9CEE000A7869 /* YKWelcomePageViewController.swift */; };
 		EF8336422F00D36055519452 /* libPods-YKPhotoMediaBroswer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD82FF0F80D924536B751F38 /* libPods-YKPhotoMediaBroswer.a */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +91,12 @@
 		DE9B13A9204D2D2C000BD32A /* YKMediaFileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKMediaFileHandler.swift; sourceTree = "<group>"; };
 		DEB412D42048043900F3A013 /* LYSheetCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSheetCustom.m; sourceTree = "<group>"; };
 		DEB412D52048043900F3A013 /* LYSheetCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSheetCustom.h; sourceTree = "<group>"; };
+		DEE5A527204E280E000A7869 /* PlayButtonOverlayLarge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlayButtonOverlayLarge@2x.png"; sourceTree = "<group>"; };
+		DEE5A528204E280F000A7869 /* PlayButtonOverlayLarge@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlayButtonOverlayLarge@3x.png"; sourceTree = "<group>"; };
+		DEE5A532204E8804000A7869 /* vbg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vbg1.png; sourceTree = "<group>"; };
+		DEE5A533204E8804000A7869 /* vbg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vbg2.png; sourceTree = "<group>"; };
+		DEE5A536204E9152000A7869 /* movie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = movie.mp4; sourceTree = "<group>"; };
+		DEE5A538204E9CEE000A7869 /* YKWelcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKWelcomePageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,13 +159,19 @@
 		DE93471D20439E6B0094E6F3 /* YKPhotoMediaBroswer */ = {
 			isa = PBXGroup;
 			children = (
+				DEE5A532204E8804000A7869 /* vbg1.png */,
+				DEE5A533204E8804000A7869 /* vbg2.png */,
 				DE58CB0C20492EE400D2BC67 /* local.jpg */,
 				DE58CB0E204933D200D2BC67 /* local1.jpg */,
+				DEE5A536204E9152000A7869 /* movie.mp4 */,
+				DEE5A527204E280E000A7869 /* PlayButtonOverlayLarge@2x.png */,
+				DEE5A528204E280F000A7869 /* PlayButtonOverlayLarge@3x.png */,
 				DE93475B2043F72C0094E6F3 /* Progress */,
 				DE9347512043AA650094E6F3 /* Common */,
 				DE93471E20439E6B0094E6F3 /* AppDelegate.swift */,
 				DE93472020439E6B0094E6F3 /* ViewController.swift */,
 				DE5236482047D2AB00AEF536 /* ImageTableViewCell.swift */,
+				DEE5A538204E9CEE000A7869 /* YKWelcomePageViewController.swift */,
 				DE93472220439E6B0094E6F3 /* Main.storyboard */,
 				DE93472520439E6B0094E6F3 /* Assets.xcassets */,
 				DE93472720439E6B0094E6F3 /* LaunchScreen.storyboard */,
@@ -333,9 +351,14 @@
 			files = (
 				DE93472920439E6B0094E6F3 /* LaunchScreen.storyboard in Resources */,
 				DE93472620439E6B0094E6F3 /* Assets.xcassets in Resources */,
+				DEE5A535204E8804000A7869 /* vbg2.png in Resources */,
 				DE93472420439E6B0094E6F3 /* Main.storyboard in Resources */,
+				DEE5A537204E9152000A7869 /* movie.mp4 in Resources */,
+				DEE5A534204E8804000A7869 /* vbg1.png in Resources */,
+				DEE5A529204E280F000A7869 /* PlayButtonOverlayLarge@2x.png in Resources */,
 				DE58CB0F204933D200D2BC67 /* local1.jpg in Resources */,
 				DE58CB0D20492EE400D2BC67 /* local.jpg in Resources */,
+				DEE5A52A204E280F000A7869 /* PlayButtonOverlayLarge@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +442,7 @@
 				DE93472120439E6B0094E6F3 /* ViewController.swift in Sources */,
 				DE9347602043FAC60094E6F3 /* YKTouchImageView.swift in Sources */,
 				DE93471F20439E6B0094E6F3 /* AppDelegate.swift in Sources */,
+				DEE5A539204E9CEE000A7869 /* YKWelcomePageViewController.swift in Sources */,
 				DE793A2F2045003000C2F128 /* YKMediaObject.swift in Sources */,
 				DE5236492047D2AB00AEF536 /* ImageTableViewCell.swift in Sources */,
 				DE9347532043E65D0094E6F3 /* YKMediaZoomView.swift in Sources */,

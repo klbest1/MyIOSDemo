@@ -34,7 +34,7 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate,UINaviga
         imageOb.path = "http://wmimg.sc115.com/wm/pic/1604/16045kx4uwfxord.jpg"
         dataSource.append( imageOb )
 
-        //Section 2
+        //Section 2  gif图片
         imageOb = YKMediaObject()
         imageOb.path = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1519980888651&di=1747dc8d4dae72176057984c8030f831&imgtype=0&src=http%3A%2F%2Fimg1.utuku.china.com%2Fuploadimg%2Fgame%2F20160302%2F59662447-fe04-44d5-b590-dcc2665416e5.gif"
         dataSource.append( imageOb )
@@ -47,7 +47,7 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate,UINaviga
         imageOb.path = "http://wmimg.sc115.com/wm/pic/1604/160445kyw2rolb1.jpg"
         dataSource.append( imageOb )
         
-        //Section 3
+        //Section 3 长图片
         var path = Bundle.main.path(forResource: "local", ofType: "jpg");
         imageOb = YKMediaObject()
         imageOb.path = path
@@ -60,6 +60,28 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate,UINaviga
         
         imageOb = YKMediaObject()
         imageOb.path = "http://wmimg.sc115.com/wm/pic/1604/160445kyw2rolb1.jpg"
+        dataSource.append( imageOb )
+        
+        //       http://mvpc.eastday.com/vzixun/20171014/20171014182536846381336_1_06400360.mp4
+//        //mvpc.eastday.com/vzixun/20180303/20180303101509947067084_1_06400360.mp4
+        //http://mobaliyun.res.mgtv.com/new_video/2018/02/28/1012/036FD5450AB291864AF0ADB5E5C3D0BA_20180228_1_1_643.mp4
+        //Section 4 视频
+        path = Bundle.main.path(forResource: "vbg1", ofType: "png");
+        imageOb = YKMediaObject()
+        imageOb.path = path
+        imageOb.vedioPath = "http://mobaliyun.res.mgtv.com/new_video/2018/02/28/1012/036FD5450AB291864AF0ADB5E5C3D0BA_20180228_1_1_643.mp4"
+        dataSource.append( imageOb )
+        
+        path = Bundle.main.path(forResource: "vbg2", ofType: "png");
+        imageOb = YKMediaObject()
+        imageOb.path = path
+        imageOb.vedioPath = "http://mobaliyun.res.mgtv.com/new_video/2018/02/27/1012/BC614A149EFD1E2F5F9127B7A45232EA_20180227_1_1_666.mp4"
+        dataSource.append( imageOb )
+        
+        //本地视频
+        path = Bundle.main.path(forResource: "movie", ofType: "mp4");
+        imageOb = YKMediaObject()
+        imageOb.vedioPath = path
         dataSource.append( imageOb )
         
         tableView.frame = self.view.bounds
@@ -114,9 +136,9 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         }else if section == 1{
             return "Gif图"
         }else if section == 2{
-            return "长图本地图片"
+            return "长图、本地图片"
         }else if section == 3{
-            return "视频"
+            return "网络、本地视频"
         }
         return ""
     }
@@ -137,43 +159,58 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         }
         let i = indexPath.section * 3
         let ob1 = dataSource[i];
-        var url1 = URL(string: ob1.path!)!
-        if (ob1.path?.hasPrefix("/var/"))! {
-            url1 = URL(fileURLWithPath: ob1.path!)
+        if var url1 = URL(string: ob1.path ?? ""){
+            if (ob1.path?.hasPrefix("/var/"))! ||  (ob1.path?.hasPrefix("/Users/"))!{
+                url1 = URL(fileURLWithPath: ob1.path!)
+            }
+            cell!.button1.setImage(url: url1)
         }
-        cell!.button1.setImage(url: url1)
+
         cell?.button1.tag = i
+        if ob1.vedioPath != nil {
+            cell?.button1.playImageView.isHidden = false
+        }
         
-        //记录点击位置
+        //记录点击位置 重要！！！
         ob1.fromView = cell?.button1
         cell?.button1.addTarget(self, action: #selector(imageCliking(_:)), for: .touchUpInside)
         
         if dataSource.count > i + 1 {
             let ob2 = dataSource[i+1]
-            var url2 = URL(string: ob2.path!)!
-            if (ob2.path?.hasPrefix("/var/"))! {
-                url2 = URL(fileURLWithPath: ob2.path!)
+            if var url2 = URL(string: ob2.path ?? ""){
+                if (ob2.path?.hasPrefix("/var/"))! || (ob2.path?.hasPrefix("/Users/"))! {
+                    url2 = URL(fileURLWithPath: ob2.path!)
+                }
+                cell?.button2.setImage(url: url2)
             }
-            cell?.button2.setImage(url: url2)
             cell?.button2.tag = i+1
             
-            //记录点击位置
+            //记录点击位置 重要！！！
             ob2.fromView = cell?.button2
             cell?.button2.addTarget(self, action: #selector(imageCliking(_:)), for: .touchUpInside)
             
+            if ob2.vedioPath != nil {
+                cell?.button2.playImageView.isHidden = false
+            }
         }
         
         if dataSource.count > i + 2 {
             let ob3 = dataSource[i+2]
-            var url3 = URL(string: ob3.path!)!
-            if (ob3.path?.hasPrefix("/var/"))! {
-                url3 = URL(fileURLWithPath: ob3.path!)
+            if var  url3 = URL(string: ob3.path ?? ""){
+                if (ob3.path?.hasPrefix("/var/"))! || (ob3.path?.hasPrefix("/Users/"))!{
+                    url3 = URL(fileURLWithPath: ob3.path!)
+                }
+                cell?.button3.setImage(url: url3)
             }
-            cell?.button3.setImage(url: url3)
+       
             cell?.button3.tag = i+2
-            //记录点击位置
+            //记录点击位置 重要！！！
             ob3.fromView = cell?.button3
             cell?.button3.addTarget(self, action: #selector(imageCliking(_:)), for: .touchUpInside)
+            
+            if ob3.vedioPath != nil {
+                cell?.button3.playImageView.isHidden = false
+            }
         }
 
         return cell!
@@ -184,7 +221,16 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     @objc func imageCliking(_ sender:UIButton)  {
-        YKMediaScrollerView.showBroswer(dataSource: dataSource, atIndex: sender.tag + 1)
+//        let ob = dataSource[sender.tag]
+//        if ob.path == nil && ob.vedioPath != nil{
+//            let welcomePage = YKWelcomePageViewController()
+//            welcomePage.setVedio(ob: ob)
+//            self.navigationController?.pushViewController(welcomePage, animated: true)
+//        }else{
+            var tempDataSource = dataSource
+//            tempDataSource.removeLast()
+            YKMediaScrollerView.showBroswer(dataSource: tempDataSource, atIndex: sender.tag + 1)
+//        }
     }
     
 }

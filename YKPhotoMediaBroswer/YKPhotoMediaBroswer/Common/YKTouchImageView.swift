@@ -20,8 +20,9 @@ class YKTouchImageView: FLAnimatedImageView {
     var imageComplete:GetImageComplete?
     var vedioComplete:GetVedioComplete?
     var progressClouser:ImageProgress?
+    var playerViewController:AVPlayerViewController?
     fileprivate var assetRequestID:PHImageRequestID?
-    fileprivate var playerViewController:AVPlayerViewController?
+    fileprivate var vedioLayer:AVPlayerLayer?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,18 +30,19 @@ class YKTouchImageView: FLAnimatedImageView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        vedioLayer?.frame = self.bounds
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //
-    func setImage(path:String)  {
+    //设置图片
+    func setImage(path:String,hideProgress:Bool? = false)  {
         if path.hasPrefix("http") {
             self.sd_setImage(with: URL(string: path), placeholderImage: nil, options: .retryFailed, progress: { [weak self] (receivedSize, expectedSize, url) in
                 
-                if self?.progressClouser != nil{
+                if self?.progressClouser != nil && !hideProgress!{
                     self?.progressClouser!(CGFloat( receivedSize)/CGFloat(expectedSize ))
                 }
                 //            print("progress\(self?.progressView.progress ?? 0.0)")
@@ -57,6 +59,20 @@ class YKTouchImageView: FLAnimatedImageView {
             self.imageComplete?(image ?? UIImage())
         }
      
+    }
+    
+    func clear()  {
+        self.frame = CGRect.zero
+        self.image = nil
+        self.vedioLayer?.removeFromSuperlayer()
+        self.playerViewController?.player?.pause()
+        self.playerViewController?.player = nil
+        self.playerViewController = nil
+        NotificationCenter.default.removeObserver(self)
+    }
+    /**/
+    func hideVedio()  {
+        self.vedioLayer?.removeFromSuperlayer()
     }
     
    //从相册加载资源
@@ -78,7 +94,13 @@ class YKTouchImageView: FLAnimatedImageView {
     }
     
     //播放视频
-    func setVedio(path:String)  {
+    func setVedio(path:String,thumbImagePath:String)  {
+        //设置视频缩略图
+        if !thumbImagePath.isEmpty {
+            setImage(path: thumbImagePath, hideProgress: true)
+        }
+        
+//        return;
         if playerViewController == nil {
             playerViewController = AVPlayerViewController()
             playerViewController?.allowsPictureInPicturePlayback = false
@@ -86,7 +108,7 @@ class YKTouchImageView: FLAnimatedImageView {
         }
 
         var vedioURL = URL(string: path)
-        if path.hasPrefix("/var/"){
+        if path.hasPrefix("/var/") ||  path.hasPrefix("/Users/"){
             vedioURL =   URL(fileURLWithPath: path)
         }
         
@@ -95,30 +117,42 @@ class YKTouchImageView: FLAnimatedImageView {
         }
         
         if path.hasPrefix("http") {
-            if let cachePath = YKMediaFileHandler.getCacheURLPath(path: path){
-                vedioURL =   URL(fileURLWithPath: cachePath)
-                playVedioAtURL(vedioURL: vedioURL!)
+            //  先获取缓存
+            if let cachePathURL = YKMediaFileHandler.getCacheURLPath(path: path){
+//                self.image = nil;
+                self.vedioComplete?()
+                vedioURL =   cachePathURL
+                DispatchQueue.main.async {
+                    self.playVedioAtURL(vedioURL: vedioURL!)
+                    self.playerViewController?.player?.play()
+                }
             }else{
+                //下载并播放
                 let configureation = URLSessionConfiguration.default
                 let seessionManager = AFURLSessionManager(sessionConfiguration: configureation)
                 let request = URLRequest(url: vedioURL!)
-                seessionManager.downloadTask(with: request, progress: { (progress) in
+                let task = seessionManager.downloadTask(with: request, progress: { (progress) in
                     self.progressClouser?(CGFloat(progress.fractionCompleted))
                 }, destination: { (url, response) -> URL in
                     let filePath = YKMediaFileHandler.getMediaVedioSavePath()
                     return URL(fileURLWithPath: filePath).appendingPathComponent(response.suggestedFilename!)
                 }, completionHandler: { (response, url, error) in
-                    YKMediaFileHandler.cacheURLPath(path: url!.absoluteString, vedioName: response.suggestedFilename!);
+                    YKMediaFileHandler.cacheURLPath(path: vedioURL!.absoluteString, vedioName: response.suggestedFilename!);
                     let filePath = YKMediaFileHandler.getMediaVedioSavePath()
                     let localVedioURL =  URL(fileURLWithPath: filePath).appendingPathComponent(response.suggestedFilename!)
-                    self.playVedioAtURL(vedioURL: localVedioURL)
-                    self.playerViewController?.player?.play()
+                    DispatchQueue.main.async {
+//                        self.image = nil;
+                        self.playVedioAtURL(vedioURL: localVedioURL)
+                        self.playerViewController?.player?.play()
+                    }
                     self.vedioComplete?()
                 })
+                task.resume()
             }
            
         }else{
             playVedioAtURL(vedioURL: vedioURL!)
+            self.playerViewController?.player?.play()
         }
        
         NotificationCenter.default.removeObserver(self)
@@ -129,10 +163,14 @@ class YKTouchImageView: FLAnimatedImageView {
         let playItem = AVPlayerItem(url: vedioURL)
         let tempPlayer = AVPlayer(playerItem: playItem)
         let playerLayer = AVPlayerLayer(player: tempPlayer)
-        playerLayer.frame = self.bounds
-        playerLayer.videoGravity = .resizeAspect
+        vedioLayer = playerLayer
+        playerLayer.videoGravity = .resizeAspectFill
         self.playerViewController?.player = tempPlayer
         self.layer.addSublayer(playerLayer)
+        
+        //主动布局一次
+        self.setNeedsLayout()
+        self.layoutIfNeeded()
     }
     
     @objc func playDidEnd(){

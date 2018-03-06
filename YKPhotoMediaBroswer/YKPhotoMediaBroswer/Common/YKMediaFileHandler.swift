@@ -46,13 +46,13 @@ class YKMediaFileHandler: NSObject {
         UserDefaults.standard.setValue(vedioName, forKey: path)
     }
     
-    class func getCacheURLPath(path:String)->String? {
+    class func getCacheURLPath(path:String)->URL? {
         guard let vedioName = UserDefaults.standard.value(forKey: path) else {
             return nil
         }
         
-        let vedioPath = URL(fileURLWithPath: getMediaVedioSavePath()).appendingPathComponent(MediaPathSuffix)
+        let vedioPath = URL(fileURLWithPath: getMediaVedioSavePath()).appendingPathComponent(vedioName as! String)
         
-        return vedioPath.appendingPathComponent(vedioName as! String).absoluteString
+        return vedioPath
     }
 }

@@ -19,10 +19,15 @@ class YKGifButton: UIButton {
     */
     
     let gifImageView = FLAnimatedImageView()
+    let playImageView = UIImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        playImageView.image = #imageLiteral(resourceName: "PlayButtonOverlayLarge.png")
+        playImageView.isHidden = true
+        gifImageView.image = #imageLiteral(resourceName: "gray")
         self.addSubview(gifImageView)
+        self.addSubview(playImageView)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,7 +42,8 @@ class YKGifButton: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         gifImageView.frame = self.bounds
-        
+        playImageView.frame = CGRect(x: 0, y: 0, width: #imageLiteral(resourceName: "PlayButtonOverlayLarge.png").size.width, height: #imageLiteral(resourceName: "PlayButtonOverlayLarge.png").size.height)
+        playImageView.center = CGPoint(x: self.bounds.size.width/2, y:  self.bounds.size.height/2)
     }
 
 }

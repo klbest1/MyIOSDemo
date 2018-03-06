@@ -82,44 +82,63 @@ class YKMediaZoomView: UIView {
                 self.progressView.progress = progress
             }
             if progress >= 1.0 {
-                self.progressView.isHidden = true;
+                DispatchQueue.main.async {
+                    self.progressView.isHidden = true;
+                }
             }
         }
         
-        //图片完成加载 
+        //图片完成加载
         zoomImageView.imageComplete = { (image) in
-            self.scrollView.contentSize = image.size;
-            self.zoomImageView.frame = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
-            let widhtScale = self.bounds.size.width/image.size.width
-            let hegithScale = self.bounds.size.height/image.size.height
-            var miniScale = min(widhtScale, hegithScale)
-            //纵向长图或者横向长图显示
-            if widhtScale / hegithScale > 3 {
-                miniScale = widhtScale;
-            }else if hegithScale/widhtScale > 3{
-                miniScale = hegithScale
+            DispatchQueue.main.async {
+                self.scrollView.contentSize = image.size;
+                self.zoomImageView.frame = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
+                let widhtScale = self.bounds.size.width/image.size.width
+                let hegithScale = self.bounds.size.height/image.size.height
+                var miniScale = min(widhtScale, hegithScale)
+                let maxScale = 1.0
+                //纵向长图或者横向长图显示
+                if widhtScale / hegithScale > 3  && hegithScale < 1 && widhtScale < 1 {
+                    miniScale = widhtScale;
+                }else if hegithScale/widhtScale > 3 && hegithScale < 1 && widhtScale < 1{
+                    miniScale = hegithScale
+                }
+                
+                if self.mediaType == MediaType.MediaTypeVedio {
+                    //这个很重要，图片大于屏幕时才设置，否则会使得整个zoom的计算方式不一样，会产生bug
+                    if miniScale < 1{
+                        miniScale = min(widhtScale, hegithScale)
+                    }else{
+                        miniScale = 1
+                    }
+                    //禁止视频缩放
+                    self.scrollView.panGestureRecognizer.isEnabled = false
+                    self.scrollView.pinchGestureRecognizer?.isEnabled = false
+                }else{
+                    self.scrollView.panGestureRecognizer.isEnabled = true
+                    self.scrollView.pinchGestureRecognizer?.isEnabled = true
+                }
+                self.scrollView.minimumZoomScale = miniScale
+                self.scrollView.maximumZoomScale = CGFloat(maxScale)
+                self.scrollView.zoomScale = miniScale
+                self.scrollView.addSubview(self.zoomImageView)
+                self.bringSubview(toFront: self.progressView)
+                
+                self.zoomedFrame = self.zoomImageView.frame;
+                self.setNeedsLayout()
+                self.layoutIfNeeded()
+                
+                //由于gif图无法一开始zoom，没有调用layout居中图片，导致收拾滑动时，zoomedFrame Origin为（0，0）
+                self.zoomedFrame = self.zoomImageView.frame;
+                //所以居中后再调用一次
             }
-            self.scrollView.minimumZoomScale = miniScale
-            self.scrollView.maximumZoomScale = 1
-            self.scrollView.zoomScale = miniScale
-            self.scrollView.addSubview(self.zoomImageView)
-            
-            self.zoomedFrame = self.zoomImageView.frame;
-            self.setNeedsLayout()
-            self.layoutIfNeeded()
-            
-            //由于gif图无法一开始zoom，没有调用layout居中图片，导致收拾滑动时，zoomedFrame Origin为（0，0）
-            self.zoomedFrame = self.zoomImageView.frame;
-            //所以居中后再调用一次
         }
         
         //视频加载完成
         zoomImageView.vedioComplete = {
-            self.zoomImageView.frame = self.bounds
-            self.scrollView.addSubview(self.zoomImageView)
-            self.zoomedFrame = self.zoomImageView.frame;
-            self.setNeedsLayout()
-            self.layoutIfNeeded()
+            DispatchQueue.main.async {
+                self.progressView.isHidden = true;
+            }
         }
         
         self.backgroundColor = UIColor.black
@@ -217,44 +236,64 @@ class YKMediaZoomView: UIView {
         self.backgroundColor = UIColor.clear
         self.superview?.backgroundColor = UIColor.clear
         self.progressView.isHidden = true
+        self.zoomImageView.hideVedio()
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
             if let fromView = self.mediaOb?.fromView {
                 let fromRect = fromView.convert(fromView.bounds, to: self.scrollView)
                 self.zoomImageView.frame = fromRect;
+            }else{
+                self.zoomImageView.alpha = 0
             }
         }, completion: { (finish) in
+            self.zoomImageView.clear()
             if self.zoomerDidDismiss != nil{
                 self.zoomerDidDismiss!()
             }
         })
     }
     
+    //MARK: - 设置显示视频图片等
     func setItem(object:YKMediaObject)  {
         self.mediaOb = object;
         self.scrollView.zoomScale = 1
         self.scrollView.maximumZoomScale = 1
         self.scrollView.minimumZoomScale = 1
         self.scrollView.contentSize = CGSize.zero
+        self.zoomImageView.alpha = 1
         self.index = object.index
-        if let path = object.path {
+        if let path = object.path ,object.vedioPath == nil{
+            //图片
             mediaType = MediaType.findType(path: object.path ?? "")
             if mediaType == MediaType.MediaTypeImage {
                 zoomImageView.setImage(path: path)
             }
-            
+        }else if object.vedioPath != nil{
+            //视频
+            mediaType = MediaType.findType(path: object.vedioPath ?? "")
+             if mediaType == MediaType.MediaTypeVedio{
+                zoomImageView.setVedio(path: object.vedioPath ?? "",thumbImagePath: object.path ?? "")
+                //背景图为空时，默认为全屏幕大小
+                if (object.path ?? "").isEmpty{
+                    zoomImageView.frame = self.bounds
+                    scrollView.addSubview(zoomImageView)
+                }
+            }
         }else if let asset = object.imageAsset{
+            //相册资源
             if asset.mediaType == .image{
                 mediaType = MediaType.MediaTypeImage
-                zoomImageView.setImage(asset: asset)
+                 zoomImageView.setImage(asset: asset)
             }
         }
         
     }
     
     func clearContent()  {
-        zoomImageView.image = nil
-        zoomImageView.frame = CGRect.zero
-        zoomedFrame = nil;
+        zoomImageView.clear()
+        zoomImageView.removeFromSuperview()
+        zoomedFrame = nil
+        self.scrollView.contentSize = CGSize.zero
+        self.removeFromSuperview()
     }
     
     func centerImage()  {
@@ -322,7 +361,7 @@ extension YKMediaZoomView:UIScrollViewDelegate{
 //MARK:- 手势代理
 extension YKMediaZoomView:UIGestureRecognizerDelegate{
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool{
- 
+
         return true
     }
     
