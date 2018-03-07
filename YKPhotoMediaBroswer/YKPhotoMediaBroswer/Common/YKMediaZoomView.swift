@@ -39,7 +39,7 @@ typealias ZoomerWillDismisClosure = ()->()
 
 class YKMediaZoomView: UIView {
     //即将移除
-    var zoomerWillDismiss:ZoomerWillDismisClosure?
+     var zoomerWillDismiss:ZoomerWillDismisClosure?
     //移除时的回调
     var zoomerDidDismiss:ZoomerDidDismisClosure?
     // 当前索引
@@ -76,25 +76,25 @@ class YKMediaZoomView: UIView {
         
         //图片加载进度
         zoomImageView.progressClouser = {
-            (progress) in
+           [weak self] (progress) in
             DispatchQueue.main.async {
-                self.progressView.isHidden = false
-                self.progressView.progress = progress
+                self?.progressView.isHidden = false
+                self?.progressView.progress = progress
             }
             if progress >= 1.0 {
                 DispatchQueue.main.async {
-                    self.progressView.isHidden = true;
+                    self?.progressView.isHidden = true;
                 }
             }
         }
         
         //图片完成加载
-        zoomImageView.imageComplete = { (image) in
-            DispatchQueue.main.async {
-                self.scrollView.contentSize = image.size;
-                self.zoomImageView.frame = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
-                let widhtScale = self.bounds.size.width/image.size.width
-                let hegithScale = self.bounds.size.height/image.size.height
+        zoomImageView.imageComplete = { [unowned tSelf = self] (image) in
+//            DispatchQueue.main.async {
+            tSelf.scrollView.contentSize = image.size;
+            tSelf.zoomImageView.frame = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
+                let widhtScale = tSelf.bounds.size.width/image.size.width
+                let hegithScale = tSelf.bounds.size.height/image.size.height
                 var miniScale = min(widhtScale, hegithScale)
                 let maxScale = 1.0
                 //纵向长图或者横向长图显示
@@ -104,40 +104,41 @@ class YKMediaZoomView: UIView {
                     miniScale = hegithScale
                 }
                 
-                if self.mediaType == MediaType.MediaTypeVedio {
+                if tSelf.mediaType == MediaType.MediaTypeVedio {
                     //这个很重要，图片大于屏幕时才设置，否则会使得整个zoom的计算方式不一样，会产生bug
                     if miniScale < 1{
                         miniScale = min(widhtScale, hegithScale)
                     }else{
                         miniScale = 1
                     }
-                    //禁止视频缩放
-                    self.scrollView.panGestureRecognizer.isEnabled = false
-                    self.scrollView.pinchGestureRecognizer?.isEnabled = false
                 }else{
-                    self.scrollView.panGestureRecognizer.isEnabled = true
-                    self.scrollView.pinchGestureRecognizer?.isEnabled = true
+                    tSelf.scrollView.panGestureRecognizer.isEnabled = true
+                    tSelf.scrollView.pinchGestureRecognizer?.isEnabled = true
                 }
-                self.scrollView.minimumZoomScale = miniScale
-                self.scrollView.maximumZoomScale = CGFloat(maxScale)
-                self.scrollView.zoomScale = miniScale
-                self.scrollView.addSubview(self.zoomImageView)
-                self.bringSubview(toFront: self.progressView)
+                tSelf.scrollView.minimumZoomScale = miniScale
+                tSelf.scrollView.maximumZoomScale = CGFloat(maxScale)
+                tSelf.scrollView.zoomScale = miniScale
+                tSelf.scrollView.addSubview(tSelf.zoomImageView)
+                tSelf.bringSubview(toFront: tSelf.progressView)
                 
-                self.zoomedFrame = self.zoomImageView.frame;
-                self.setNeedsLayout()
-                self.layoutIfNeeded()
+                tSelf.zoomedFrame = tSelf.zoomImageView.frame;
+                tSelf.setNeedsLayout()
+                tSelf.layoutIfNeeded()
                 
                 //由于gif图无法一开始zoom，没有调用layout居中图片，导致收拾滑动时，zoomedFrame Origin为（0，0）
-                self.zoomedFrame = self.zoomImageView.frame;
+                tSelf.zoomedFrame = tSelf.zoomImageView.frame;
                 //所以居中后再调用一次
-            }
+//            }
         }
         
         //视频加载完成
         zoomImageView.vedioComplete = {
+            [weak self] in
             DispatchQueue.main.async {
-                self.progressView.isHidden = true;
+                self?.progressView.isHidden = true;
+                  //禁止视频缩放
+                self?.scrollView.panGestureRecognizer.isEnabled = false
+                self?.scrollView.pinchGestureRecognizer?.isEnabled = false
             }
         }
         
@@ -172,6 +173,7 @@ class YKMediaZoomView: UIView {
         }
         
         if sender.state == .changed  && zoomedFrame != nil{
+            UIApplication.shared.isStatusBarHidden = false
             let translation = sender.translation(in: self);
             let movingDistance = sqrt(translation.x*translation.x + translation.y*translation.y)
             let movingCenter = CGPoint(x: zoomedFrame!.midX + translation.x, y: zoomedFrame!.midY + translation.y)
@@ -199,6 +201,7 @@ class YKMediaZoomView: UIView {
                     self.backgroundColor = UIColor.black.withAlphaComponent((1))
                     self.superview?.backgroundColor = UIColor.black.withAlphaComponent((1))
                 })
+                UIApplication.shared.isStatusBarHidden = true
             }
             
             preGuestureTouch = nil;
@@ -211,6 +214,9 @@ class YKMediaZoomView: UIView {
     }
     
     @objc func doubleTapping(_ guesture:UITapGestureRecognizer){
+        if mediaType == MediaType.MediaTypeVedio {
+            return;
+        }
         if scrollView.zoomScale != 1 {
             scrollView.setZoomScale(1, animated: true)
         }else{
@@ -228,7 +234,8 @@ class YKMediaZoomView: UIView {
     }
     
     //MARK:- 功能方法
-    func removePage()  {
+    fileprivate func removePage()  {
+        UIApplication.shared.isStatusBarHidden = false
         //移除界面
         if self.zoomerWillDismiss != nil{
             self.zoomerWillDismiss!()
@@ -244,10 +251,10 @@ class YKMediaZoomView: UIView {
             }else{
                 self.zoomImageView.alpha = 0
             }
-        }, completion: { (finish) in
-            self.zoomImageView.clear()
-            if self.zoomerDidDismiss != nil{
-                self.zoomerDidDismiss!()
+        }, completion: { [weak self] (finish) in
+            self?.zoomImageView.clear()
+            if self?.zoomerDidDismiss != nil{
+                self?.zoomerDidDismiss!()
             }
         })
     }
@@ -273,7 +280,7 @@ class YKMediaZoomView: UIView {
              if mediaType == MediaType.MediaTypeVedio{
                 zoomImageView.setVedio(path: object.vedioPath ?? "",thumbImagePath: object.path ?? "")
                 //背景图为空时，默认为全屏幕大小
-                if (object.path ?? "").isEmpty{
+                if (object.path ?? "").isEmpty || object.isFullScreen{
                     zoomImageView.frame = self.bounds
                     scrollView.addSubview(zoomImageView)
                 }
@@ -296,7 +303,7 @@ class YKMediaZoomView: UIView {
         self.removeFromSuperview()
     }
     
-    func centerImage()  {
+   fileprivate func centerImage()  {
         var imageFrame = self.zoomImageView.frame
         if imageFrame.size.width < self.bounds.size.width {
             imageFrame.origin.x = (self.bounds.size.width - imageFrame.size.width)/2
@@ -320,7 +327,6 @@ class YKMediaZoomView: UIView {
         if animateAtFirstShowOut,  let fromView = self.mediaOb?.fromView,self.zoomedFrame != nil{
             //首次出现是否显示展开动画
             let fromRect = fromView.convert(fromView.bounds, to: self.scrollView)
-            
             self.zoomImageView.frame = fromRect;
             UIView.animate(withDuration: 0.3, animations: {
                 self.zoomImageView.frame = self.zoomedFrame!
@@ -362,6 +368,9 @@ extension YKMediaZoomView:UIScrollViewDelegate{
 extension YKMediaZoomView:UIGestureRecognizerDelegate{
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool{
 
+        if (gestureRecognizer == self.scrollView.panGestureRecognizer || gestureRecognizer == self.scrollView.pinchGestureRecognizer) {
+            return false
+        }
         return true
     }
     

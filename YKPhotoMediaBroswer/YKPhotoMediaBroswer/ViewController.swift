@@ -82,6 +82,8 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate,UINaviga
         path = Bundle.main.path(forResource: "movie", ofType: "mp4");
         imageOb = YKMediaObject()
         imageOb.vedioPath = path
+        //全屏展示
+        imageOb.isFullScreen = true;
         dataSource.append( imageOb )
         
         tableView.frame = self.view.bounds
@@ -227,9 +229,9 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
 //            welcomePage.setVedio(ob: ob)
 //            self.navigationController?.pushViewController(welcomePage, animated: true)
 //        }else{
-            var tempDataSource = dataSource
+//            var tempDataSource = dataSource
 //            tempDataSource.removeLast()
-            YKMediaScrollerView.showBroswer(dataSource: tempDataSource, atIndex: sender.tag + 1)
+            YKMediaScrollerView.showBroswer(dataSource: dataSource, atIndex: sender.tag + 1)
 //        }
     }
     

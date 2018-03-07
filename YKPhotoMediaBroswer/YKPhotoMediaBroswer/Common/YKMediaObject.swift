@@ -10,9 +10,10 @@ import UIKit
 import Photos
 
 class YKMediaObject: NSObject {
-    var path:String?
-    var vedioPath:String?
-    var imageAsset:PHAsset?
-    var index:Int = 0
-    var fromView:UIView?
+    var path:String?  //图片路径可本地、可远程
+    var vedioPath:String? //视频路径可本地、可远程
+    var isFullScreen:Bool = false  //视频是否全屏
+    var imageAsset:PHAsset?  //相册资源
+    var index:Int = 0  // 索引，私有参数，对比标记当前页是否显示
+    var fromView:UIView?  //点击的控件，用来产生视图出现或移出动画
 }

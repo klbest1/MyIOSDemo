@@ -23,6 +23,7 @@ class YKTouchImageView: FLAnimatedImageView {
     var playerViewController:AVPlayerViewController?
     fileprivate var assetRequestID:PHImageRequestID?
     fileprivate var vedioLayer:AVPlayerLayer?
+    fileprivate var vedioImage:UIImage?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,16 +47,18 @@ class YKTouchImageView: FLAnimatedImageView {
                     self?.progressClouser!(CGFloat( receivedSize)/CGFloat(expectedSize ))
                 }
                 //            print("progress\(self?.progressView.progress ?? 0.0)")
-            }) { (image, error, cache, url) in
+            }) {  [weak self] (image, error, cache, url) in
+                self?.vedioImage = image;
                 DispatchQueue.main.async {
                     //                self.animatedImage = image
-                    if (self.imageComplete != nil && image != nil) {
-                        self.imageComplete!(image!)
+                    if (self?.imageComplete != nil && image != nil) {
+                        self?.imageComplete!(image!)
                     }
                 }
             }
         }else if path.hasPrefix("/var/"){
             self.image = UIImage(contentsOfFile: path)
+            self.vedioImage = image;
             self.imageComplete?(image ?? UIImage())
         }
      
@@ -64,16 +67,20 @@ class YKTouchImageView: FLAnimatedImageView {
     func clear()  {
         self.frame = CGRect.zero
         self.image = nil
+        hideVedio()
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    /**/
+    func hideVedio()  {
+        self.image = vedioImage
         self.vedioLayer?.removeFromSuperlayer()
         self.playerViewController?.player?.pause()
         self.playerViewController?.player = nil
+        self.vedioLayer = nil
         self.playerViewController = nil
-        NotificationCenter.default.removeObserver(self)
     }
-    /**/
-    func hideVedio()  {
-        self.vedioLayer?.removeFromSuperlayer()
-    }
+    
     
    //从相册加载资源
     func setImage(asset:PHAsset)  {
@@ -100,7 +107,6 @@ class YKTouchImageView: FLAnimatedImageView {
             setImage(path: thumbImagePath, hideProgress: true)
         }
         
-//        return;
         if playerViewController == nil {
             playerViewController = AVPlayerViewController()
             playerViewController?.allowsPictureInPicturePlayback = false
@@ -119,13 +125,14 @@ class YKTouchImageView: FLAnimatedImageView {
         if path.hasPrefix("http") {
             //  先获取缓存
             if let cachePathURL = YKMediaFileHandler.getCacheURLPath(path: path){
-//                self.image = nil;
-                self.vedioComplete?()
+                self.image = nil;
                 vedioURL =   cachePathURL
-                DispatchQueue.main.async {
-                    self.playVedioAtURL(vedioURL: vedioURL!)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+                    self.playVedioAtURL(vedioURL: cachePathURL)
                     self.playerViewController?.player?.play()
-                }
+                })
+                self.vedioComplete?()
+
             }else{
                 //下载并播放
                 let configureation = URLSessionConfiguration.default
@@ -137,14 +144,14 @@ class YKTouchImageView: FLAnimatedImageView {
                     let filePath = YKMediaFileHandler.getMediaVedioSavePath()
                     return URL(fileURLWithPath: filePath).appendingPathComponent(response.suggestedFilename!)
                 }, completionHandler: { (response, url, error) in
+                    self.image = nil;
                     YKMediaFileHandler.cacheURLPath(path: vedioURL!.absoluteString, vedioName: response.suggestedFilename!);
                     let filePath = YKMediaFileHandler.getMediaVedioSavePath()
                     let localVedioURL =  URL(fileURLWithPath: filePath).appendingPathComponent(response.suggestedFilename!)
-                    DispatchQueue.main.async {
-//                        self.image = nil;
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
                         self.playVedioAtURL(vedioURL: localVedioURL)
                         self.playerViewController?.player?.play()
-                    }
+                    })
                     self.vedioComplete?()
                 })
                 task.resume()
@@ -157,6 +164,9 @@ class YKTouchImageView: FLAnimatedImageView {
        
         NotificationCenter.default.removeObserver(self)
         NotificationCenter.default.addObserver(self, selector: #selector(playDidEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(playDidEnd), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(playDidEnd), name: NSNotification.Name.AVPlayerItemPlaybackStalled, object: nil)
+
     }
     
     func playVedioAtURL(vedioURL:URL)  {

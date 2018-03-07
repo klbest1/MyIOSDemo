@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 protocol YKMediaScrollerViewDelegate:class {
 }
 
@@ -47,7 +46,7 @@ class YKMediaScrollerView: UIView {
     class func showBroswer(dataSource:[YKMediaObject],atIndex:Int){
         let mediaScroolerView = YKMediaScrollerView(frame: UIScreen.main.bounds)
         UIApplication.shared.keyWindow?.addSubview(mediaScroolerView)
-//        UIApplication.shared.statusBarStyle = .lightContent
+        UIApplication.shared.isStatusBarHidden = true
         mediaScroolerView.setDataSouce(dataSource: dataSource, currentIndex: atIndex)
     }
     
@@ -72,8 +71,8 @@ class YKMediaScrollerView: UIView {
         
         self.layoutIfNeeded()
         //滑倒当前页面去
-        scrollToPageAtIndex(index: currentIndex-1,animate: false)
         animateAtFirstShowOut = true;
+        scrollToPageAtIndex(index: currentIndex-1,animate: false)
     }
     
     fileprivate func scrollToPageAtIndex(index:Int,animate:Bool)  {
