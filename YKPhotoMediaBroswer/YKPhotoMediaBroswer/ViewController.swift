@@ -222,7 +222,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         return 150;
     }
     
-    @objc func imageCliking(_ sender:UIButton)  {
+    @objc func imageCliking(_ sender:YKGifButton)  {
 //        let ob = dataSource[sender.tag]
 //        if ob.path == nil && ob.vedioPath != nil{
 //            let welcomePage = YKWelcomePageViewController()
@@ -231,6 +231,8 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
 //        }else{
 //            var tempDataSource = dataSource
 //            tempDataSource.removeLast()
+           let ob = dataSource[sender.tag]
+        ob.thumbImage = sender.gifImageView.image
             YKMediaScrollerView.showBroswer(dataSource: dataSource, atIndex: sender.tag + 1)
 //        }
     }

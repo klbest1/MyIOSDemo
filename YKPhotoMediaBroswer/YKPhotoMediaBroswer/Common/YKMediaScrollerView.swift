@@ -140,7 +140,7 @@ class YKMediaScrollerView: UIView {
         }
         let zoomerView = dequeReuseAbleZoomber()
         //初次展开时，设置展开动画
-        if visibleZoomer.count == 0 && animateAtFirstShowOut{
+        if visibleZoomer.count == 0 && animateAtFirstShowOut && !item.isFullScreen{
             zoomerView.animateAtFirstShowOut = animateAtFirstShowOut
             animateAtFirstShowOut = false
         }

@@ -91,6 +91,10 @@ class YKMediaZoomView: UIView {
         //图片完成加载
         zoomImageView.imageComplete = { [unowned tSelf = self] (image) in
 //            DispatchQueue.main.async {
+            tSelf.scrollView.zoomScale = 1
+            tSelf.scrollView.maximumZoomScale = 1
+            tSelf.scrollView.minimumZoomScale = 1
+            tSelf.scrollView.contentSize = CGSize.zero
             tSelf.scrollView.contentSize = image.size;
             tSelf.zoomImageView.frame = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
                 let widhtScale = tSelf.bounds.size.width/image.size.width
@@ -268,17 +272,34 @@ class YKMediaZoomView: UIView {
         self.scrollView.contentSize = CGSize.zero
         self.zoomImageView.alpha = 1
         self.index = object.index
+        //设置缩略图
+        if let thumImage = object.thumbImage{
+            self.zoomImageView.image = object.thumbImage
+            self.zoomImageView.imageComplete?(thumImage)
+        }
+        
+        //首次出现时有动画，导致图片为第一次大小，所以设置延时
+        var dealyTime = 0.0
+        if animateAtFirstShowOut {
+            dealyTime = 0.3
+        }
+        
         if let path = object.path ,object.vedioPath == nil{
             //图片
             mediaType = MediaType.findType(path: object.path ?? "")
             if mediaType == MediaType.MediaTypeImage {
-                zoomImageView.setImage(path: path)
+    
+                DispatchQueue.main.asyncAfter(deadline: .now() + dealyTime, execute: {
+                    self.zoomImageView.setImage(path: path)
+                })
             }
         }else if object.vedioPath != nil{
             //视频
             mediaType = MediaType.findType(path: object.vedioPath ?? "")
              if mediaType == MediaType.MediaTypeVedio{
-                zoomImageView.setVedio(path: object.vedioPath ?? "",thumbImagePath: object.path ?? "")
+                DispatchQueue.main.asyncAfter(deadline: .now() + dealyTime, execute: {
+                    self.zoomImageView.setVedio(path: object.vedioPath ?? "",thumbImagePath: object.path ?? "")
+                })
                 //背景图为空时，默认为全屏幕大小
                 if (object.path ?? "").isEmpty || object.isFullScreen{
                     zoomImageView.frame = self.bounds
@@ -289,7 +310,9 @@ class YKMediaZoomView: UIView {
             //相册资源
             if asset.mediaType == .image{
                 mediaType = MediaType.MediaTypeImage
-                 zoomImageView.setImage(asset: asset)
+                DispatchQueue.main.asyncAfter(deadline: .now() + dealyTime, execute: {
+                    self.zoomImageView.setImage(asset: asset)
+                })
             }
         }
         
@@ -326,13 +349,13 @@ class YKMediaZoomView: UIView {
         
         if animateAtFirstShowOut,  let fromView = self.mediaOb?.fromView,self.zoomedFrame != nil{
             //首次出现是否显示展开动画
+            self.animateAtFirstShowOut = false;
             let fromRect = fromView.convert(fromView.bounds, to: self.scrollView)
             self.zoomImageView.frame = fromRect;
             UIView.animate(withDuration: 0.3, animations: {
                 self.zoomImageView.frame = self.zoomedFrame!
                 self.centerImage()
             }, completion: { (finish) in
-                self.animateAtFirstShowOut = false;
             })
         }else{
             centerImage()
@@ -344,10 +367,10 @@ class YKMediaZoomView: UIView {
 
 extension YKMediaZoomView:UIScrollViewDelegate{
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        if mediaType! == .MediaTypeImage {
+//        if mediaType != nil,mediaType! == .MediaTypeImage {
             self.setNeedsLayout()
             self.layoutIfNeeded()
-        }
+//        }
     }
     
     func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {

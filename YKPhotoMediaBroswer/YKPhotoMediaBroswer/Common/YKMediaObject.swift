@@ -10,6 +10,7 @@ import UIKit
 import Photos
 
 class YKMediaObject: NSObject {
+    var thumbImage:UIImage? //缩率图
     var path:String?  //图片路径可本地、可远程
     var vedioPath:String? //视频路径可本地、可远程
     var isFullScreen:Bool = false  //视频是否全屏

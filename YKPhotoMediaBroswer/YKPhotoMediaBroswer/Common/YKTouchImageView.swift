@@ -56,7 +56,7 @@ class YKTouchImageView: FLAnimatedImageView {
                     }
                 }
             }
-        }else if path.hasPrefix("/var/"){
+        }else if path.hasPrefix("/var/") || path.hasPrefix("/Users/"){
             self.image = UIImage(contentsOfFile: path)
             self.vedioImage = image;
             self.imageComplete?(image ?? UIImage())
@@ -125,9 +125,9 @@ class YKTouchImageView: FLAnimatedImageView {
         if path.hasPrefix("http") {
             //  先获取缓存
             if let cachePathURL = YKMediaFileHandler.getCacheURLPath(path: path){
-                self.image = nil;
                 vedioURL =   cachePathURL
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+                    self.image = nil;
                     self.playVedioAtURL(vedioURL: cachePathURL)
                     self.playerViewController?.player?.play()
                 })
@@ -144,11 +144,11 @@ class YKTouchImageView: FLAnimatedImageView {
                     let filePath = YKMediaFileHandler.getMediaVedioSavePath()
                     return URL(fileURLWithPath: filePath).appendingPathComponent(response.suggestedFilename!)
                 }, completionHandler: { (response, url, error) in
-                    self.image = nil;
                     YKMediaFileHandler.cacheURLPath(path: vedioURL!.absoluteString, vedioName: response.suggestedFilename!);
                     let filePath = YKMediaFileHandler.getMediaVedioSavePath()
                     let localVedioURL =  URL(fileURLWithPath: filePath).appendingPathComponent(response.suggestedFilename!)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+                        self.image = nil;
                         self.playVedioAtURL(vedioURL: localVedioURL)
                         self.playerViewController?.player?.play()
                     })
