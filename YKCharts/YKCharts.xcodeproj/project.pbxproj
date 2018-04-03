@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE739CF2206883240083A7F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE739CF1206883240083A7F6 /* AppDelegate.m */; };
+		DE739CF5206883240083A7F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE739CF4206883240083A7F6 /* ViewController.m */; };
+		DE739CF8206883240083A7F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE739CF6206883240083A7F6 /* Main.storyboard */; };
+		DE739CFA206883240083A7F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE739CF9206883240083A7F6 /* Assets.xcassets */; };
+		DE739CFD206883240083A7F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE739CFB206883240083A7F6 /* LaunchScreen.storyboard */; };
+		DE739D00206883240083A7F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE739CFF206883240083A7F6 /* main.m */; };
+		DE739D0A206883240083A7F6 /* YKChartsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE739D09206883240083A7F6 /* YKChartsTests.m */; };
+		DE739D15206883240083A7F6 /* YKChartsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE739D14206883240083A7F6 /* YKChartsUITests.m */; };
+		DE739D24206883590083A7F6 /* YKLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE739D23206883590083A7F6 /* YKLineChartView.m */; };
+		DE739D28206884280083A7F6 /* YKLineDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DE739D27206884280083A7F6 /* YKLineDataObject.m */; };
+		DEC917C32071D061008C5050 /* YKYLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC917C22071D061008C5050 /* YKYLineView.m */; };
+		DEC917C62071E0D7008C5050 /* YKUIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC917C52071E0D7008C5050 /* YKUIConfig.m */; };
+		DEC917C92071FE5D008C5050 /* YKDrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC917C82071FE5D008C5050 /* YKDrawLineView.m */; };
+		DED1208C207324DC00466450 /* FTPopOverMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DED1208B207324DC00466450 /* FTPopOverMenu.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE739D06206883240083A7F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE739CE5206883240083A7F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE739CEC206883240083A7F6;
+			remoteInfo = YKCharts;
+		};
+		DE739D11206883240083A7F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE739CE5206883240083A7F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE739CEC206883240083A7F6;
+			remoteInfo = YKCharts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE739CED206883240083A7F6 /* YKCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YKCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE739CF0206883240083A7F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DE739CF1206883240083A7F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DE739CF3206883240083A7F6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DE739CF4206883240083A7F6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DE739CF7206883240083A7F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE739CF9206883240083A7F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE739CFC206883240083A7F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE739CFE206883240083A7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE739CFF206883240083A7F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DE739D05206883240083A7F6 /* YKChartsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YKChartsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE739D09206883240083A7F6 /* YKChartsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChartsTests.m; sourceTree = "<group>"; };
+		DE739D0B206883240083A7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE739D10206883240083A7F6 /* YKChartsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YKChartsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE739D14206883240083A7F6 /* YKChartsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKChartsUITests.m; sourceTree = "<group>"; };
+		DE739D16206883240083A7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE739D22206883590083A7F6 /* YKLineChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKLineChartView.h; sourceTree = "<group>"; };
+		DE739D23206883590083A7F6 /* YKLineChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKLineChartView.m; sourceTree = "<group>"; };
+		DE739D26206884280083A7F6 /* YKLineDataObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKLineDataObject.h; sourceTree = "<group>"; };
+		DE739D27206884280083A7F6 /* YKLineDataObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKLineDataObject.m; sourceTree = "<group>"; };
+		DEC917C12071D061008C5050 /* YKYLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKYLineView.h; sourceTree = "<group>"; };
+		DEC917C22071D061008C5050 /* YKYLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKYLineView.m; sourceTree = "<group>"; };
+		DEC917C42071E0D7008C5050 /* YKUIConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKUIConfig.h; sourceTree = "<group>"; };
+		DEC917C52071E0D7008C5050 /* YKUIConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKUIConfig.m; sourceTree = "<group>"; };
+		DEC917C72071FE5D008C5050 /* YKDrawLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKDrawLineView.h; sourceTree = "<group>"; };
+		DEC917C82071FE5D008C5050 /* YKDrawLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKDrawLineView.m; sourceTree = "<group>"; };
+		DED120862073202D00466450 /* YKCharts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YKCharts-Bridging-Header.h"; sourceTree = "<group>"; };
+		DED1208A207324DC00466450 /* FTPopOverMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPopOverMenu.h; sourceTree = "<group>"; };
+		DED1208B207324DC00466450 /* FTPopOverMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPopOverMenu.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE739CEA206883240083A7F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE739D02206883240083A7F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE739D0D206883240083A7F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE739CE4206883240083A7F6 = {
+			isa = PBXGroup;
+			children = (
+				DE739CEF206883240083A7F6 /* YKCharts */,
+				DE739D08206883240083A7F6 /* YKChartsTests */,
+				DE739D13206883240083A7F6 /* YKChartsUITests */,
+				DE739CEE206883240083A7F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE739CEE206883240083A7F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE739CED206883240083A7F6 /* YKCharts.app */,
+				DE739D05206883240083A7F6 /* YKChartsTests.xctest */,
+				DE739D10206883240083A7F6 /* YKChartsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE739CEF206883240083A7F6 /* YKCharts */ = {
+			isa = PBXGroup;
+			children = (
+				DED12089207324DC00466450 /* FTPopOverMenu */,
+				DE739D25206883FE0083A7F6 /* common */,
+				DE739CF0206883240083A7F6 /* AppDelegate.h */,
+				DE739CF1206883240083A7F6 /* AppDelegate.m */,
+				DE739CF3206883240083A7F6 /* ViewController.h */,
+				DE739CF4206883240083A7F6 /* ViewController.m */,
+				DE739CF6206883240083A7F6 /* Main.storyboard */,
+				DE739CF9206883240083A7F6 /* Assets.xcassets */,
+				DE739CFB206883240083A7F6 /* LaunchScreen.storyboard */,
+				DE739CFE206883240083A7F6 /* Info.plist */,
+				DE739CFF206883240083A7F6 /* main.m */,
+			);
+			path = YKCharts;
+			sourceTree = "<group>";
+		};
+		DE739D08206883240083A7F6 /* YKChartsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE739D09206883240083A7F6 /* YKChartsTests.m */,
+				DE739D0B206883240083A7F6 /* Info.plist */,
+			);
+			path = YKChartsTests;
+			sourceTree = "<group>";
+		};
+		DE739D13206883240083A7F6 /* YKChartsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE739D14206883240083A7F6 /* YKChartsUITests.m */,
+				DE739D16206883240083A7F6 /* Info.plist */,
+			);
+			path = YKChartsUITests;
+			sourceTree = "<group>";
+		};
+		DE739D25206883FE0083A7F6 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				DE739D22206883590083A7F6 /* YKLineChartView.h */,
+				DE739D23206883590083A7F6 /* YKLineChartView.m */,
+				DE739D26206884280083A7F6 /* YKLineDataObject.h */,
+				DE739D27206884280083A7F6 /* YKLineDataObject.m */,
+				DEC917C12071D061008C5050 /* YKYLineView.h */,
+				DEC917C22071D061008C5050 /* YKYLineView.m */,
+				DEC917C42071E0D7008C5050 /* YKUIConfig.h */,
+				DEC917C52071E0D7008C5050 /* YKUIConfig.m */,
+				DEC917C72071FE5D008C5050 /* YKDrawLineView.h */,
+				DEC917C82071FE5D008C5050 /* YKDrawLineView.m */,
+				DED120862073202D00466450 /* YKCharts-Bridging-Header.h */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		DED12089207324DC00466450 /* FTPopOverMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DED1208A207324DC00466450 /* FTPopOverMenu.h */,
+				DED1208B207324DC00466450 /* FTPopOverMenu.m */,
+			);
+			name = FTPopOverMenu;
+			path = "../../../Downloads/FTPopOverMenu-master/FTPopOverMenu";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE739CEC206883240083A7F6 /* YKCharts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE739D19206883240083A7F6 /* Build configuration list for PBXNativeTarget "YKCharts" */;
+			buildPhases = (
+				DE739CE9206883240083A7F6 /* Sources */,
+				DE739CEA206883240083A7F6 /* Frameworks */,
+				DE739CEB206883240083A7F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YKCharts;
+			productName = YKCharts;
+			productReference = DE739CED206883240083A7F6 /* YKCharts.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE739D04206883240083A7F6 /* YKChartsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE739D1C206883240083A7F6 /* Build configuration list for PBXNativeTarget "YKChartsTests" */;
+			buildPhases = (
+				DE739D01206883240083A7F6 /* Sources */,
+				DE739D02206883240083A7F6 /* Frameworks */,
+				DE739D03206883240083A7F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE739D07206883240083A7F6 /* PBXTargetDependency */,
+			);
+			name = YKChartsTests;
+			productName = YKChartsTests;
+			productReference = DE739D05206883240083A7F6 /* YKChartsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE739D0F206883240083A7F6 /* YKChartsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE739D1F206883240083A7F6 /* Build configuration list for PBXNativeTarget "YKChartsUITests" */;
+			buildPhases = (
+				DE739D0C206883240083A7F6 /* Sources */,
+				DE739D0D206883240083A7F6 /* Frameworks */,
+				DE739D0E206883240083A7F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE739D12206883240083A7F6 /* PBXTargetDependency */,
+			);
+			name = YKChartsUITests;
+			productName = YKChartsUITests;
+			productReference = DE739D10206883240083A7F6 /* YKChartsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE739CE5206883240083A7F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "康林";
+				TargetAttributes = {
+					DE739CEC206883240083A7F6 = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0930;
+						ProvisioningStyle = Automatic;
+					};
+					DE739D04206883240083A7F6 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE739CEC206883240083A7F6;
+					};
+					DE739D0F206883240083A7F6 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE739CEC206883240083A7F6;
+					};
+				};
+			};
+			buildConfigurationList = DE739CE8206883240083A7F6 /* Build configuration list for PBXProject "YKCharts" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE739CE4206883240083A7F6;
+			productRefGroup = DE739CEE206883240083A7F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE739CEC206883240083A7F6 /* YKCharts */,
+				DE739D04206883240083A7F6 /* YKChartsTests */,
+				DE739D0F206883240083A7F6 /* YKChartsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE739CEB206883240083A7F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE739CFD206883240083A7F6 /* LaunchScreen.storyboard in Resources */,
+				DE739CFA206883240083A7F6 /* Assets.xcassets in Resources */,
+				DE739CF8206883240083A7F6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE739D03206883240083A7F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE739D0E206883240083A7F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE739CE9206883240083A7F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEC917C92071FE5D008C5050 /* YKDrawLineView.m in Sources */,
+				DE739D28206884280083A7F6 /* YKLineDataObject.m in Sources */,
+				DEC917C62071E0D7008C5050 /* YKUIConfig.m in Sources */,
+				DE739CF5206883240083A7F6 /* ViewController.m in Sources */,
+				DE739D24206883590083A7F6 /* YKLineChartView.m in Sources */,
+				DED1208C207324DC00466450 /* FTPopOverMenu.m in Sources */,
+				DE739D00206883240083A7F6 /* main.m in Sources */,
+				DEC917C32071D061008C5050 /* YKYLineView.m in Sources */,
+				DE739CF2206883240083A7F6 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE739D01206883240083A7F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE739D0A206883240083A7F6 /* YKChartsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE739D0C206883240083A7F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE739D15206883240083A7F6 /* YKChartsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE739D07206883240083A7F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE739CEC206883240083A7F6 /* YKCharts */;
+			targetProxy = DE739D06206883240083A7F6 /* PBXContainerItemProxy */;
+		};
+		DE739D12206883240083A7F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE739CEC206883240083A7F6 /* YKCharts */;
+			targetProxy = DE739D11206883240083A7F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE739CF6206883240083A7F6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE739CF7206883240083A7F6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE739CFB206883240083A7F6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE739CFC206883240083A7F6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE739D17206883240083A7F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DE739D18206883240083A7F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE739D1A206883240083A7F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YKCharts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.YKCharts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YKCharts/common/YKCharts-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE739D1B206883240083A7F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YKCharts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.YKCharts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YKCharts/common/YKCharts-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DE739D1D206883240083A7F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YKChartsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.YKChartsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YKCharts.app/YKCharts";
+			};
+			name = Debug;
+		};
+		DE739D1E206883240083A7F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YKChartsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.YKChartsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YKCharts.app/YKCharts";
+			};
+			name = Release;
+		};
+		DE739D20206883240083A7F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YKChartsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.YKChartsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YKCharts;
+			};
+			name = Debug;
+		};
+		DE739D21206883240083A7F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YKChartsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.YKChartsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YKCharts;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE739CE8206883240083A7F6 /* Build configuration list for PBXProject "YKCharts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE739D17206883240083A7F6 /* Debug */,
+				DE739D18206883240083A7F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE739D19206883240083A7F6 /* Build configuration list for PBXNativeTarget "YKCharts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE739D1A206883240083A7F6 /* Debug */,
+				DE739D1B206883240083A7F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE739D1C206883240083A7F6 /* Build configuration list for PBXNativeTarget "YKChartsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE739D1D206883240083A7F6 /* Debug */,
+				DE739D1E206883240083A7F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE739D1F206883240083A7F6 /* Build configuration list for PBXNativeTarget "YKChartsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE739D20206883240083A7F6 /* Debug */,
+				DE739D21206883240083A7F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE739CE5206883240083A7F6 /* Project object */;
+}

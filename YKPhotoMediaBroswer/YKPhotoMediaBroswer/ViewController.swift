@@ -62,9 +62,6 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate,UINaviga
         imageOb.path = "http://wmimg.sc115.com/wm/pic/1604/160445kyw2rolb1.jpg"
         dataSource.append( imageOb )
         
-        //       http://mvpc.eastday.com/vzixun/20171014/20171014182536846381336_1_06400360.mp4
-//        //mvpc.eastday.com/vzixun/20180303/20180303101509947067084_1_06400360.mp4
-        //http://mobaliyun.res.mgtv.com/new_video/2018/02/28/1012/036FD5450AB291864AF0ADB5E5C3D0BA_20180228_1_1_643.mp4
         //Section 4 视频
         path = Bundle.main.path(forResource: "vbg1", ofType: "png");
         imageOb = YKMediaObject()
@@ -231,9 +228,9 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
 //        }else{
 //            var tempDataSource = dataSource
 //            tempDataSource.removeLast()
-           let ob = dataSource[sender.tag]
+        let ob = dataSource[sender.tag]
         ob.thumbImage = sender.gifImageView.image
-            YKMediaScrollerView.showBroswer(dataSource: dataSource, atIndex: sender.tag + 1)
+        YKMediaScrollerView.showBroswer(dataSource: dataSource, atIndex: sender.tag + 1)
 //        }
     }
     
