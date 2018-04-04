@@ -25,6 +25,20 @@
 }
 
 -(NSInteger)min{
-    return 0;
+    if (_min != 0) {
+        return  _min;
+    }
+    NSInteger tempMin = [self.showNumbers.firstObject integerValue];
+    for (NSNumber *number in self.showNumbers) {
+        if ([number integerValue] < tempMin) {
+            tempMin = [number integerValue];
+        }
+    }
+    if (tempMin < 0) {
+        _min = tempMin - 200;
+    }else{
+        _min = 0;
+    }
+    return _min;
 }
 @end

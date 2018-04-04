@@ -20,7 +20,7 @@
 		DEC917C32071D061008C5050 /* YKYLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC917C22071D061008C5050 /* YKYLineView.m */; };
 		DEC917C62071E0D7008C5050 /* YKUIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC917C52071E0D7008C5050 /* YKUIConfig.m */; };
 		DEC917C92071FE5D008C5050 /* YKDrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC917C82071FE5D008C5050 /* YKDrawLineView.m */; };
-		DED1208C207324DC00466450 /* FTPopOverMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DED1208B207324DC00466450 /* FTPopOverMenu.m */; };
+		DEE68F872074BE6D001819EF /* FTPopOverMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE68F862074BE6C001819EF /* FTPopOverMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,9 +67,8 @@
 		DEC917C52071E0D7008C5050 /* YKUIConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKUIConfig.m; sourceTree = "<group>"; };
 		DEC917C72071FE5D008C5050 /* YKDrawLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKDrawLineView.h; sourceTree = "<group>"; };
 		DEC917C82071FE5D008C5050 /* YKDrawLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKDrawLineView.m; sourceTree = "<group>"; };
-		DED120862073202D00466450 /* YKCharts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YKCharts-Bridging-Header.h"; sourceTree = "<group>"; };
-		DED1208A207324DC00466450 /* FTPopOverMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPopOverMenu.h; sourceTree = "<group>"; };
-		DED1208B207324DC00466450 /* FTPopOverMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPopOverMenu.m; sourceTree = "<group>"; };
+		DEE68F852074BE6C001819EF /* FTPopOverMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPopOverMenu.h; sourceTree = "<group>"; };
+		DEE68F862074BE6C001819EF /* FTPopOverMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPopOverMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +119,7 @@
 		DE739CEF206883240083A7F6 /* YKCharts */ = {
 			isa = PBXGroup;
 			children = (
-				DED12089207324DC00466450 /* FTPopOverMenu */,
+				DEE68F842074BE6C001819EF /* FTPopOverMenu */,
 				DE739D25206883FE0083A7F6 /* common */,
 				DE739CF0206883240083A7F6 /* AppDelegate.h */,
 				DE739CF1206883240083A7F6 /* AppDelegate.m */,
@@ -166,19 +165,17 @@
 				DEC917C52071E0D7008C5050 /* YKUIConfig.m */,
 				DEC917C72071FE5D008C5050 /* YKDrawLineView.h */,
 				DEC917C82071FE5D008C5050 /* YKDrawLineView.m */,
-				DED120862073202D00466450 /* YKCharts-Bridging-Header.h */,
 			);
 			path = common;
 			sourceTree = "<group>";
 		};
-		DED12089207324DC00466450 /* FTPopOverMenu */ = {
+		DEE68F842074BE6C001819EF /* FTPopOverMenu */ = {
 			isa = PBXGroup;
 			children = (
-				DED1208A207324DC00466450 /* FTPopOverMenu.h */,
-				DED1208B207324DC00466450 /* FTPopOverMenu.m */,
+				DEE68F852074BE6C001819EF /* FTPopOverMenu.h */,
+				DEE68F862074BE6C001819EF /* FTPopOverMenu.m */,
 			);
-			name = FTPopOverMenu;
-			path = "../../../Downloads/FTPopOverMenu-master/FTPopOverMenu";
+			path = FTPopOverMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,7 +317,7 @@
 				DEC917C62071E0D7008C5050 /* YKUIConfig.m in Sources */,
 				DE739CF5206883240083A7F6 /* ViewController.m in Sources */,
 				DE739D24206883590083A7F6 /* YKLineChartView.m in Sources */,
-				DED1208C207324DC00466450 /* FTPopOverMenu.m in Sources */,
+				DEE68F872074BE6D001819EF /* FTPopOverMenu.m in Sources */,
 				DE739D00206883240083A7F6 /* main.m in Sources */,
 				DEC917C32071D061008C5050 /* YKYLineView.m in Sources */,
 				DE739CF2206883240083A7F6 /* AppDelegate.m in Sources */,

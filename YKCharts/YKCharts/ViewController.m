@@ -41,19 +41,10 @@
     config.lineColor = [UIColor orangeColor];
     config.circleWidth = 3;
     
-    /*
-     @property (nonatomic,assign) double max;
-     @property (nonatomic,assign) double min;
-     @property (nonatomic,retain) NSString *ySuffix;
-     @property (nonatomic,retain) NSArray *xDescriptionDataSource;
-     @property (nonatomic,retain) NSArray *showNumbers;
-     @end
-     */
-    
     YKLineDataObject *dataObject = [YKLineDataObject new];
     dataObject.ySuffix = @"K";
     dataObject.xDescriptionDataSource = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周七"];
-    dataObject.showNumbers = @[@(1000.2),@(100.2),@(2000000.23),@(600.62),@(700.82),@(800.2),@(100.72)];
+    dataObject.showNumbers = @[@(1000.2),@(-100.2),@(2000.23),@(600.62),@(700.82),@(800.2),@(100.72)];
     [_chartView setupDataSource:dataObject withUIConfgi:config];
 }
 
