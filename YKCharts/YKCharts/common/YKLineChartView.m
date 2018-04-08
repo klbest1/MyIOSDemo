@@ -203,7 +203,7 @@
         NSNumber *data = [_dataSource.showNumbers objectAtIndex:i];
         double number = [data doubleValue];
         //计算 y 的位置
-        CGFloat percentage = (1 - (fabs(number)-_dataSource.min)/(labs(_dataSource.max) - _dataSource.min));
+        CGFloat percentage = (1 - fabs(number-_dataSource.min)/labs(_dataSource.max - _dataSource.min));
         CGFloat yOffset = _chartYLength  * percentage + 20;
         CGFloat xOffset = _xItemWidth * (i + 1) - _xItemWidth/2;
         CGPoint drawPoint = CGPointMake(xOffset, yOffset);
