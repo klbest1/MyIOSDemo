@@ -192,5 +192,5 @@ typedef void (^FTPopOverMenuDismissBlock)(void);
  *  dismiss method
  */
 + (void) dismiss;
-
+- (void)dismiss;
 @end

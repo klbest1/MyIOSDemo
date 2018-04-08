@@ -159,6 +159,9 @@
     [_xDescriptionViews removeAllObjects];
     
     [_drawPoints removeAllObjects];
+    
+    [_selectedLineView removeFromSuperview];
+    [_popMenu dismiss];
 }
 
 -(void)installYLines{
