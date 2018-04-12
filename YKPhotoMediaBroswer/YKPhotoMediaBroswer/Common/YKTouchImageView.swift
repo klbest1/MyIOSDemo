@@ -15,6 +15,7 @@ typealias GetImageComplete = (UIImage)->()
 typealias GetVedioComplete = ()->()
 typealias ImageProgress = (CGFloat)->()
 
+
 class YKTouchImageView: FLAnimatedImageView {
     
     var imageComplete:GetImageComplete?
@@ -24,6 +25,7 @@ class YKTouchImageView: FLAnimatedImageView {
     fileprivate var assetRequestID:PHImageRequestID?
     fileprivate var vedioLayer:AVPlayerLayer?
     fileprivate var vedioImage:UIImage?
+    fileprivate var totalSize:Int = 1000000
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,10 +43,16 @@ class YKTouchImageView: FLAnimatedImageView {
     //设置图片
     func setImage(path:String,hideProgress:Bool? = false)  {
         if path.hasPrefix("http") {
+            //            SDWebImageManager.shared().cancelAll()
+            self.progressClouser!(0)
             self.sd_setImage(with: URL(string: path), placeholderImage: nil, options: .retryFailed, progress: { [weak self] (receivedSize, expectedSize, url) in
                 
                 if self?.progressClouser != nil && !hideProgress!{
-                    self?.progressClouser!(CGFloat( receivedSize)/CGFloat(expectedSize ))
+                    if ( expectedSize > 0){
+                        self?.totalSize = expectedSize
+                    }
+                    print("receivedSize:\(receivedSize) expectedSize:\(expectedSize)")
+                    self?.progressClouser!(CGFloat( receivedSize)/CGFloat((self?.totalSize)! ))
                 }
                 //            print("progress\(self?.progressView.progress ?? 0.0)")
             }) {  [weak self] (image, error, cache, url) in
@@ -61,7 +69,7 @@ class YKTouchImageView: FLAnimatedImageView {
             self.vedioImage = image;
             self.imageComplete?(image ?? UIImage())
         }
-     
+        
     }
     
     func clear()  {
@@ -82,7 +90,7 @@ class YKTouchImageView: FLAnimatedImageView {
     }
     
     
-   //从相册加载资源
+    //从相册加载资源
     func setImage(asset:PHAsset)  {
         let imageManager = PHImageManager.default()
         let imageRequestOption = PHImageRequestOptions()
@@ -91,7 +99,7 @@ class YKTouchImageView: FLAnimatedImageView {
         imageRequestOption.deliveryMode = .highQualityFormat
         imageRequestOption.isSynchronous = false
         imageRequestOption.progressHandler = {
-          (progress,error,stop,info)  in
+            (progress,error,stop,info)  in
             self.progressClouser?(CGFloat(progress))
         }
         self.assetRequestID = imageManager.requestImage(for: asset, targetSize: PHImageManagerMaximumSize, contentMode: .default, options: imageRequestOption, resultHandler: { (image, info) in
@@ -109,10 +117,10 @@ class YKTouchImageView: FLAnimatedImageView {
         
         if playerViewController == nil {
             playerViewController = AVPlayerViewController()
-            playerViewController?.allowsPictureInPicturePlayback = false
+            //            playerViewController?.showsPlaybackControls = false
             playerViewController?.showsPlaybackControls = false
         }
-
+        
         var vedioURL = URL(string: path)
         if path.hasPrefix("/var/") ||  path.hasPrefix("/Users/"){
             vedioURL =   URL(fileURLWithPath: path)
@@ -132,7 +140,7 @@ class YKTouchImageView: FLAnimatedImageView {
                     self.playerViewController?.player?.play()
                 })
                 self.vedioComplete?()
-
+                
             }else{
                 //下载并播放
                 let configureation = URLSessionConfiguration.default
@@ -156,17 +164,17 @@ class YKTouchImageView: FLAnimatedImageView {
                 })
                 task.resume()
             }
-           
+            
         }else{
             playVedioAtURL(vedioURL: vedioURL!)
             self.playerViewController?.player?.play()
         }
-       
+        
         NotificationCenter.default.removeObserver(self)
         NotificationCenter.default.addObserver(self, selector: #selector(playDidEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(playDidEnd), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(playDidEnd), name: NSNotification.Name.AVPlayerItemPlaybackStalled, object: nil)
-
+        
     }
     
     func playVedioAtURL(vedioURL:URL)  {
