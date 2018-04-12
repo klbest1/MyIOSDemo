@@ -46,7 +46,7 @@ class YKMediaScrollerView: UIView {
     class func showBroswer(dataSource:[YKMediaObject],atIndex:Int){
         let mediaScroolerView = YKMediaScrollerView(frame: UIScreen.main.bounds)
         UIApplication.shared.keyWindow?.addSubview(mediaScroolerView)
-        UIApplication.shared.isStatusBarHidden = true
+        UIApplication.shared.setStatusBarHidden(true, with: .none)
         mediaScroolerView.setDataSouce(dataSource: dataSource, currentIndex: atIndex)
     }
     
@@ -111,7 +111,7 @@ class YKMediaScrollerView: UIView {
         }
         return nil
     }
-
+    
     fileprivate func dequeReuseAbleZoomber() -> YKMediaZoomView {
         var zoomerView = reuseableZoomber.first;
         if zoomerView == nil {
@@ -132,7 +132,7 @@ class YKMediaScrollerView: UIView {
     }
     
     fileprivate func addZoomerAt(item:YKMediaObject)  {
-
+        
         for zoomer in visibleZoomer{
             if zoomer.index == item.index{
                 return;
@@ -149,7 +149,7 @@ class YKMediaScrollerView: UIView {
         zoomerView.setItem(object: item)
         //移除图片浏览控件
         zoomerView.zoomerDidDismiss = {
-             [weak self] in
+            [weak self] in
             self?.disMissBroswer()
         }
         //即将移除图片浏览控件
@@ -157,6 +157,7 @@ class YKMediaScrollerView: UIView {
             [weak self] in
             self?.backgroundColor = UIColor.clear
             self?.pageController.isHidden = true;
+            self?.isUserInteractionEnabled = false;
         }
         visibleZoomer.append(zoomerView)
     }
@@ -179,7 +180,7 @@ extension YKMediaScrollerView:UIScrollViewDelegate{
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-//        print("bounds:\(scrollView.bounds)")
+        //        print("bounds:\(scrollView.bounds)")
         var firstIndex = Int(scrollView.bounds.minX/scrollView.bounds.size.width);
         if firstIndex < 0 {
             firstIndex = 0
@@ -201,7 +202,7 @@ extension YKMediaScrollerView:UIScrollViewDelegate{
         
         //移除掉不可见的视图
         visibleZoomer = visibleZoomer.filter{
-             !self.reuseableZoomber.contains($0)
+            !self.reuseableZoomber.contains($0)
         }
         
         //添加当前滑动时，可见的视图

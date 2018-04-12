@@ -230,7 +230,7 @@ class YKMediaZoomView: UIView {
         if sheet == nil {
             sheet = LYSheetCustom(title: nil, delegate: self, cancelButtonTitle: "取消", otherButtonTitlesArray: ["保存到相册"])
         }
-        if sheet?.isVisible == false{
+        if sheet?.isVisible == false && zoomImageView.image != nil{
             sheet?.show()
         }
     }
@@ -413,6 +413,22 @@ extension YKMediaZoomView:UIGestureRecognizerDelegate{
 
 extension YKMediaZoomView:LYSheetCustomDelegate{
     func lySheetCustom(_ sheetCustom: LYSheetCustom!, clickedButtonAt buttonIndex: Int) {
-        
+        if let image = zoomImageView.image {
+            UIImageWriteToSavedPhotosAlbum(image, self,#selector(image(_:didFinishSavingWithError:contextInfo:)) , nil)
+        }
     }
+    
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            //            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            //            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            //            present(ac, animated: true)
+        } else {
+            //            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
+            //            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            //            present(ac, animated: true)
+        }
+    }
+    
 }
