@@ -15,12 +15,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        badgeView.frame = CGRect(x: 150, y: 300, width: 50, height: 50)
-        badgeView.setBadgeNumber(num: "99+")
+        let config = BageConfig()
+        config.backGroundColor = UIColor.orange
+        config.txtFront = UIFont.systemFont(ofSize: 10)
+        config.txtColor = UIColor.white
+        
+        badgeView.frame = CGRect(x: 150, y: 300, width: 12, height: 12)
+        badgeView.setBadgeNumber(num: "28",config: config)
         badgeView.finishBolock = {
             (finish:Bool) in
             DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                self.badgeView.setBadgeNumber(num: "109+")
+                self.badgeView.setBadgeNumber(num: "310+",config:config)
             })
         }
         self.view.addSubview(badgeView)

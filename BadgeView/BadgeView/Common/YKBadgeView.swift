@@ -8,16 +8,16 @@
 
 import UIKit
 
-enum BadgeStyle:Int {
-    case Round = 1,
-    CornerRadius = 2
-}
-
 typealias FinishBlock = (_ finish:Bool)->Void
+
+class BageConfig: NSObject {
+    var backGroundColor:UIColor = UIColor.red
+    var txtColor:UIColor = UIColor.white
+    var txtFront:UIFont = UIFont.systemFont(ofSize: 16)
+}
 
 class YKBadgeView: UIView {
     
-    var badgeStyle = BadgeStyle.Round
     var finishBolock:FinishBlock?
     fileprivate  var backFontView:UIView = UIView()
     fileprivate var frontView:UIView = UIView()
@@ -36,6 +36,7 @@ class YKBadgeView: UIView {
         titleLabel.font = UIFont.systemFont(ofSize: 16)
         titleLabel.textAlignment = .center
         titleLabel.textColor = UIColor.white
+        titleLabel.numberOfLines = 0
         
         frontView.backgroundColor = UIColor.red
         backFontView.backgroundColor = UIColor.red
@@ -58,8 +59,16 @@ class YKBadgeView: UIView {
     }
     
     
-    func setBadgeNumber(num:String)  {
+    func setBadgeNumber(num:String,config:BageConfig)  {
+        frontView.backgroundColor = config.backGroundColor
+        backFontView.backgroundColor = config.backGroundColor
+        titleLabel.font = config.txtFront
+        titleLabel.textColor = config.txtColor
+        
+        titleLabel.frame = CGRect(x: 0, y: 0, width: 30, height: titleLabel.font.lineHeight)
         titleLabel.text = num;
+        titleLabel.sizeToFit()
+        
         layoutBadgeSubviews()
     }
     
@@ -75,30 +84,36 @@ class YKBadgeView: UIView {
     }
     
      func layoutBadgeSubviews() {
+
+        //动态调整badge的大小
+        let selfCenter = self.center
+        var selfFrame = self.frame;
+        selfFrame.size.width = titleLabel.frame.size.width + 5
+        selfFrame.size.height = titleLabel.frame.size.height + 3
+        if selfFrame.size.width < selfFrame.size.height {
+            selfFrame.size.width = selfFrame.size.height
+        }
+        self.frame = selfFrame;
+        self.center = selfCenter
+        
+        //
         frontView.isHidden = false;
-        frontView.frame = CGRect(x: 0, y: 0, width: self.bounds.size.width , height: self.bounds.size.width )
-        titleLabel.frame = frontView.frame
+        frontView.frame = CGRect(x: 0, y: 0, width: self.bounds.size.width , height: self.bounds.size.height )
+        titleLabel.center = frontView.center
         backFontView.frame = frontView.frame
         originCenterPoint = backFontView.center;
         
-        if badgeStyle == .CornerRadius {
-            frontView.layer.cornerRadius = 5
-            frontView.layer.masksToBounds = true;
-            backFontView.layer.cornerRadius = 6
-            backFontView.layer.masksToBounds = true;
-        }else{
-            frontView.layer.cornerRadius = max(frontView.bounds.size.height, frontView.bounds.size.width)/2.0
-            backFontView.layer.cornerRadius = frontView.layer.cornerRadius
-            backFontView.layer.masksToBounds = true;
-            frontView.layer.masksToBounds = true;
-        }
+        frontView.layer.cornerRadius = min(frontView.bounds.size.height, frontView.bounds.size.width)/2.0
+        backFontView.layer.cornerRadius = frontView.layer.cornerRadius
+        backFontView.layer.masksToBounds = true;
+        frontView.layer.masksToBounds = true;
     }
    
     func drawRect(path:UIBezierPath)  {
         if backFontView.bounds.size.width > 5 {
             curveLayer.isHidden = false;
             curveLayer.path = path.cgPath
-            curveLayer.fillColor = UIColor.red.cgColor
+            curveLayer.fillColor = backFontView.backgroundColor?.cgColor
             overLayView.layer.insertSublayer(curveLayer, below:  frontView.layer)
         }else{
             curveLayer.removeFromSuperlayer()
