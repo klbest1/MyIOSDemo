@@ -14,6 +14,7 @@ class BageConfig: NSObject {
     var backGroundColor:UIColor = UIColor.red
     var txtColor:UIColor = UIColor.white
     var txtFront:UIFont = UIFont.systemFont(ofSize: 16)
+    var isMoveEnable = true;
 }
 
 class YKBadgeView: UIView {
@@ -21,14 +22,14 @@ class YKBadgeView: UIView {
     var finishBolock:FinishBlock?
     fileprivate  var backFontView:UIView = UIView()
     fileprivate var frontView:UIView = UIView()
-    fileprivate var titleLabel:UILabel = UILabel()
+    var titleLabel:UILabel = UILabel()
     fileprivate var overLayView:UIView = UIView()
     fileprivate var bombView:UIImageView = UIImageView()
     fileprivate var curveLayer:CAShapeLayer = CAShapeLayer()
     fileprivate var originCenterPoint:CGPoint = CGPoint.zero
     fileprivate var springPoint = CGPoint.zero
     fileprivate var r1:CGFloat = 0.0
-    
+    fileprivate var panGusture:UIPanGestureRecognizer!
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -41,14 +42,14 @@ class YKBadgeView: UIView {
         frontView.backgroundColor = UIColor.red
         backFontView.backgroundColor = UIColor.red
         backFontView.isHidden = true
-
+        
         overLayView.backgroundColor = .clear;
         overLayView.frame = UIScreen.main.bounds
         
         self.addSubview(backFontView)
         self.addSubview(frontView)
         frontView.addSubview(titleLabel)
-        let panGusture = UIPanGestureRecognizer(target: self, action: #selector(paning(_:)));
+        panGusture = UIPanGestureRecognizer(target: self, action: #selector(paning(_:)));
         self.addGestureRecognizer(panGusture);
         
     }
@@ -60,14 +61,22 @@ class YKBadgeView: UIView {
     
     
     func setBadgeNumber(num:String,config:BageConfig)  {
+        if num == "0" {
+            return;
+        }
         frontView.backgroundColor = config.backGroundColor
         backFontView.backgroundColor = config.backGroundColor
         titleLabel.font = config.txtFront
         titleLabel.textColor = config.txtColor
-        
         titleLabel.frame = CGRect(x: 0, y: 0, width: 30, height: titleLabel.font.lineHeight)
         titleLabel.text = num;
         titleLabel.sizeToFit()
+        
+        if !config.isMoveEnable {
+            self.removeGestureRecognizer(panGusture)
+        }else{
+            self.addGestureRecognizer(panGusture);
+        }
         
         layoutBadgeSubviews()
     }
@@ -83,8 +92,8 @@ class YKBadgeView: UIView {
         return nil;
     }
     
-     func layoutBadgeSubviews() {
-
+    func layoutBadgeSubviews() {
+        
         //动态调整badge的大小
         let selfCenter = self.center
         var selfFrame = self.frame;
@@ -108,7 +117,7 @@ class YKBadgeView: UIView {
         backFontView.layer.masksToBounds = true;
         frontView.layer.masksToBounds = true;
     }
-   
+    
     func drawRect(path:UIBezierPath)  {
         if backFontView.bounds.size.width > 5 {
             curveLayer.isHidden = false;
@@ -121,13 +130,22 @@ class YKBadgeView: UIView {
     }
     
     func disPlaySpringAnimation(startPoint:CGPoint)  {
-        let animation = CASpringAnimation(keyPath: "position")
-        animation.duration = animation.settlingDuration
-        animation.fromValue = NSValue(cgPoint: startPoint)
-        animation.toValue = NSValue(cgPoint: originCenterPoint)
-        animation.initialVelocity = 70
-        animation.mass = 0.5
-        frontView.layer.add(animation, forKey: nil)
+        if #available(iOS 9.0, *) {
+            let animation = CASpringAnimation(keyPath: "position")
+            animation.duration = animation.settlingDuration
+            animation.fromValue = NSValue(cgPoint: startPoint)
+            animation.toValue = NSValue(cgPoint: originCenterPoint)
+            animation.initialVelocity = 70
+            animation.mass = 0.5
+            frontView.layer.add(animation, forKey: nil)
+        } else {
+            // Fallback on earlier versions
+            let animation = CABasicAnimation(keyPath: "position")
+            animation.fromValue = NSValue(cgPoint: startPoint)
+            animation.toValue = NSValue(cgPoint: originCenterPoint)
+            frontView.layer.add(animation, forKey: nil)
+        }
+        
     }
     
     func showBombAnimation(touchPoint:CGPoint)  {
@@ -145,7 +163,7 @@ class YKBadgeView: UIView {
         self.addSubview(bombView)
     }
     
-
+    
     @objc func paning(_ sender:UIPanGestureRecognizer) {
         
         if sender.state == .began {
@@ -154,7 +172,7 @@ class YKBadgeView: UIView {
         
         let miniR1:CGFloat = 5;
         let touchPoint = sender.location(in: self)
-
+        
         if sender.state == .changed {
             var distance:CGFloat = 0.0
             let r2 = min(self.bounds.size.width, self.bounds.size.height)/2
@@ -162,7 +180,7 @@ class YKBadgeView: UIView {
             let doubleSqrt = (touchPoint.x - originCenter.x) * (touchPoint.x -  originCenter.x) + (touchPoint.y - originCenter.y) * (touchPoint.y - originCenter.y)
             distance = CGFloat(sqrt(doubleSqrt))
             r1 = r2
-
+            
             if distance > 0{
                 // 将前景加入全屏
                 if overLayView.superview == nil{
@@ -213,7 +231,7 @@ class YKBadgeView: UIView {
                 path.addQuadCurve(to: pointA, controlPoint: controlP2)
                 drawRect(path: path)
             }
-
+            
         }
         
         if sender.state == .failed  || sender.state == .ended || sender.state == .cancelled{
@@ -221,7 +239,7 @@ class YKBadgeView: UIView {
             curveLayer.removeFromSuperlayer()
             overLayView.removeFromSuperview()
             self.addSubview(frontView)
-
+            
             if r1 > miniR1{
                 frontView.isHidden = false;
                 layoutBadgeSubviews()
