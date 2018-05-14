@@ -61,9 +61,9 @@ class YKBadgeView: UIView {
     
     
     func setBadgeNumber(num:String,config:BageConfig)  {
-        if num == "0" {
-            return;
-        }
+        
+        self.isHidden = num == "0"
+        
         frontView.backgroundColor = config.backGroundColor
         backFontView.backgroundColor = config.backGroundColor
         titleLabel.font = config.txtFront
