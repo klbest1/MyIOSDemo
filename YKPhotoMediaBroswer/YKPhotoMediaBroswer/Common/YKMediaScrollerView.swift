@@ -51,6 +51,7 @@ class YKMediaScrollerView: UIView {
     }
     
     func disMissBroswer()  {
+        SDImageCache.shared().clearMemory()
         self.removeFromSuperview()
     }
     

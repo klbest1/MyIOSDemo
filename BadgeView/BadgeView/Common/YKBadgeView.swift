@@ -14,6 +14,7 @@ class BageConfig: NSObject {
     var backGroundColor:UIColor = UIColor.red
     var txtColor:UIColor = UIColor.white
     var txtFront:UIFont = UIFont.systemFont(ofSize: 16)
+    //是否允许移动badge
     var isMoveEnable = true;
 }
 
