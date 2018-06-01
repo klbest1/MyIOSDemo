@@ -284,26 +284,25 @@ class YKMediaZoomView: UIView {
         
         if let path = object.path ,object.vedioPath == nil{
             //图片
-            mediaType = MediaType.findType(path: object.path ?? "")
-            if mediaType == MediaType.MediaTypeImage {
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + dealyTime, execute: {
-                    self.zoomImageView.setImage(path: path)
-                })
-            }
+            // mediaType = MediaType.findType(path: object.path ?? "")
+            mediaType = MediaType.MediaTypeImage
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + dealyTime, execute: {
+                self.zoomImageView.setImage(path: path)
+            })
         }else if object.vedioPath != nil{
             //视频
-            mediaType = MediaType.findType(path: object.vedioPath ?? "")
-            if mediaType == MediaType.MediaTypeVedio{
-                DispatchQueue.main.asyncAfter(deadline: .now() + dealyTime, execute: {
-                    self.zoomImageView.setVedio(path: object.vedioPath ?? "",thumbImagePath: object.path ?? "")
-                })
-                //背景图为空时，默认为全屏幕大小
-                if (object.path ?? "").isEmpty || object.isFullScreen{
-                    zoomImageView.frame = self.bounds
-                    scrollView.addSubview(zoomImageView)
-                }
+//            mediaType = MediaType.findType(path: object.vedioPath ?? "")
+            mediaType = MediaType.MediaTypeVedio
+            DispatchQueue.main.asyncAfter(deadline: .now() + dealyTime, execute: {
+                self.zoomImageView.setVedio(path: object.vedioPath ?? "",thumbImagePath: object.path ?? "")
+            })
+            //背景图为空时，默认为全屏幕大小
+            if (object.path ?? "").isEmpty || object.isFullScreen{
+                zoomImageView.frame = self.bounds
+                scrollView.addSubview(zoomImageView)
             }
+            
         }else if let asset = object.imageAsset{
             //相册资源
             if asset.mediaType == .image{

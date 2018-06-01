@@ -44,7 +44,6 @@ class YKTouchImageView: FLAnimatedImageView {
     func setImage(path:String,hideProgress:Bool? = false)  {
         if path.hasPrefix("http") {
             //            SDWebImageManager.shared().cancelAll()
-            self.progressClouser!(0)
             self.sd_setImage(with: URL(string: path), placeholderImage: nil, options: .retryFailed, progress: { [weak self] (receivedSize, expectedSize, url) in
                 
                 if self?.progressClouser != nil && !hideProgress!{

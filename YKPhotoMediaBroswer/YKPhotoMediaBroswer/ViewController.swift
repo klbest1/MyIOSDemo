@@ -23,15 +23,15 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate,UINaviga
         
         //Section 1
         var imageOb = YKMediaObject()
-        imageOb.path = "http://wmimg.sc115.com/wm/pic/1604/1604yrzhgpb3j4f.jpg"
+        imageOb.path = "http://demo.chofn.com:88/uploads/documents/water/2018/05/31/9a3e92d4576f777c.png"
         dataSource.append( imageOb )
         
         imageOb = YKMediaObject()
-        imageOb.path = "http://wmimg.sc115.com/wm/pic/1604/1604ig4im5f3njj.jpg"
+        imageOb.path = "http://pic2.cxtuku.com/00/01/91/b837b88378fc.jpg"
         dataSource.append( imageOb )
 
         imageOb = YKMediaObject()
-        imageOb.path = "http://wmimg.sc115.com/wm/pic/1604/16045kx4uwfxord.jpg"
+        imageOb.path = "http://img.taopic.com/uploads/allimg/140804/240388-140P40P33417.jpg"
         dataSource.append( imageOb )
 
         //Section 2  gif图片
