@@ -6,8 +6,8 @@
 
 ### 2.BadgeView
 数量标记，爆炸动画，使用方便。已在实际项目中使用。 
-![image](https://github.com/klbest1/MyIOSDemo/blob/master/Images/badge.gif)                  
-数量标记，爆炸动画，使用方便。已在实际项目中使用。     
+![image](https://github.com/klbest1/MyIOSDemo/blob/master/Images/badge.gif)                           
+   
 使用实例：    
 ```c
 let config = BageConfig()
@@ -31,9 +31,7 @@ self.view.addSubview(badgeView)
 
 ### 4.YKCharts
 自定义折线图，已在实际项目中使用。
-![image](https://github.com/klbest1/MyIOSDemo/blob/master/Images/chart.gif)         
-
-自定义折线图，已在实际项目中使用。
+![image](https://github.com/klbest1/MyIOSDemo/blob/master/Images/chart.gif)          
 使用：
 ```c
 //y轴
