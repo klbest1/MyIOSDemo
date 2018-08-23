@@ -8,7 +8,7 @@
 ### 2.BadgeView
 数量标记，爆炸动画，使用方便。已在实际项目中使用。     
 使用实例：    
-···c
+```c
         let config = BageConfig()
         config.backGroundColor = UIColor.orange
         config.txtFront = UIFont.systemFont(ofSize: 10)
@@ -22,7 +22,8 @@
             })
         }
         self.view.addSubview(badgeView)
-···
+```c
+
 ### 3.ImageSwiper
 模仿陌陌图片切换
 
