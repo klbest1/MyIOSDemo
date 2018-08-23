@@ -22,7 +22,7 @@
             })
         }
         self.view.addSubview(badgeView)
-```c
+```
 
 ### 3.ImageSwiper
 模仿陌陌图片切换
@@ -30,6 +30,7 @@
 ### 4.YKCharts
 自定义折线图，已在实际项目中使用。
 使用：
+```c
 //y轴
     YKUIConfig *config = [YKUIConfig new];
     config.yDescFront = [UIFont fontWithName:@"PingFang-SC-Medium" size:10.0f];
@@ -49,7 +50,7 @@
     dataObject.xDescriptionDataSource = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周七"];
     dataObject.showNumbers = @[@(1000.2),@(-100.2),@(2000.23),@(600.62),@(700.82),@(800.2),@(100.72)];
     [_chartView setupDataSource:dataObject withUIConfgi:config];
-    
+  ```
 ### 5.YKPhotoMediaBroswer
 仿微信朋友圈图片视频浏览，图片来源网络，本地，相册。已在实际项目中使用。      
     
