@@ -9,19 +9,19 @@
 数量标记，爆炸动画，使用方便。已在实际项目中使用。     
 使用实例：    
 ```c
-        let config = BageConfig()
-        config.backGroundColor = UIColor.orange
-        config.txtFront = UIFont.systemFont(ofSize: 10)
-        config.txtColor = UIColor.white
-        badgeView.frame = CGRect(x: 150, y: 300, width: 150, height: 150)
-        badgeView.setBadgeNumber(num: "28",config: config)
-        badgeView.finishBolock = {
-            (finish:Bool) in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                self.badgeView.setBadgeNumber(num: "310+",config:config)
-            })
-        }
-        self.view.addSubview(badgeView)
+     let config = BageConfig()
+     config.backGroundColor = UIColor.orange
+     config.txtFront = UIFont.systemFont(ofSize: 10)
+     config.txtColor = UIColor.white
+     badgeView.frame = CGRect(x: 150, y: 300, width: 150, height: 150)
+     badgeView.setBadgeNumber(num: "28",config: config)
+     badgeView.finishBolock = {
+          (finish:Bool) in
+          DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+              self.badgeView.setBadgeNumber(num: "310+",config:config)
+          })
+      }
+      self.view.addSubview(badgeView)
 ```
 
 ### 3.ImageSwiper
