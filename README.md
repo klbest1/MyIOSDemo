@@ -8,8 +8,8 @@
 ### 2.BadgeView
 数量标记，爆炸动画，使用方便。已在实际项目中使用。     
 使用实例：    
-···
-   let config = BageConfig()
+···c
+        let config = BageConfig()
         config.backGroundColor = UIColor.orange
         config.txtFront = UIFont.systemFont(ofSize: 10)
         config.txtColor = UIColor.white
