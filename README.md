@@ -2,11 +2,12 @@
 ## IOS控件、组件Demo      
 ### 1.Animations
 常用动画，正在收集中～    
-
 ![image](https://github.com/klbest1/MyIOSDemo/blob/master/Images/anim.gif)    
 
 ### 2.BadgeView
 数量标记，爆炸动画，使用方便。已在实际项目中使用。     
+![image](https://github.com/klbest1/MyIOSDemo/blob/master/Images/badge.gif)                           
+   
 使用实例：    
 ```c
 let config = BageConfig()
@@ -25,10 +26,12 @@ self.view.addSubview(badgeView)
 ```
 
 ### 3.ImageSwiper
-模仿陌陌图片切换
+模仿陌陌图片切换             
+![image](https://github.com/klbest1/MyIOSDemo/blob/master/Images/swip.gif)          
 
 ### 4.YKCharts
-自定义折线图，已在实际项目中使用。
+自定义折线图，已在实际项目中使用。    
+![image](https://github.com/klbest1/MyIOSDemo/blob/master/Images/chart.gif)          
 使用：
 ```c
 //y轴
@@ -53,7 +56,7 @@ dataObject.showNumbers = @[@(1000.2),@(-100.2),@(2000.23),@(600.62),@(700.82),@(
  ```
 ### 5.YKPhotoMediaBroswer
 仿微信朋友圈图片视频浏览，图片来源网络，本地，相册。已在实际项目中使用。      
-    
+![image](https://github.com/klbest1/MyIOSDemo/blob/master/Images/browser.gif)              
 ### 6.ZoomAndCropperImage
 图片裁剪，可用于头像     
-    
+![image](https://github.com/klbest1/MyIOSDemo/blob/master/Images/crop.gif)          
