@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         config.txtFront = UIFont.systemFont(ofSize: 10)
         config.txtColor = UIColor.white
         
-        badgeView.frame = CGRect(x: 150, y: 300, width: 12, height: 12)
+        badgeView.frame = CGRect(x: 150, y: 300, width: 150, height: 150)
         badgeView.setBadgeNumber(num: "28",config: config)
         badgeView.finishBolock = {
             (finish:Bool) in
