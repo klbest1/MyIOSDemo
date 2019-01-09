@@ -1,0 +1,370 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A05E385821C7D47400416ECC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A05E385721C7D47400416ECC /* AppDelegate.m */; };
+		A05E385B21C7D47400416ECC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05E385A21C7D47400416ECC /* ViewController.m */; };
+		A05E385E21C7D47400416ECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05E385C21C7D47400416ECC /* Main.storyboard */; };
+		A05E386021C7D47800416ECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A05E385F21C7D47800416ECC /* Assets.xcassets */; };
+		A05E386321C7D47800416ECC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05E386121C7D47800416ECC /* LaunchScreen.storyboard */; };
+		A05E386621C7D47800416ECC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A05E386521C7D47800416ECC /* main.m */; };
+		A05E387021C7D4F500416ECC /* SKWeakTargetOb.m in Sources */ = {isa = PBXBuildFile; fileRef = A05E386F21C7D4F500416ECC /* SKWeakTargetOb.m */; };
+		A05E387321C7D60500416ECC /* SKWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = A05E387221C7D60500416ECC /* SKWaveView.m */; };
+		A07A5C5F21C87C910057BCDF /* SKDrawImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A07A5C5E21C87C910057BCDF /* SKDrawImageView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A05E385321C7D47400416ECC /* Wave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wave.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A05E385621C7D47400416ECC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A05E385721C7D47400416ECC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A05E385921C7D47400416ECC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A05E385A21C7D47400416ECC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A05E385D21C7D47400416ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A05E385F21C7D47800416ECC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A05E386221C7D47800416ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A05E386421C7D47800416ECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A05E386521C7D47800416ECC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A05E386E21C7D4F500416ECC /* SKWeakTargetOb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKWeakTargetOb.h; sourceTree = "<group>"; };
+		A05E386F21C7D4F500416ECC /* SKWeakTargetOb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKWeakTargetOb.m; sourceTree = "<group>"; };
+		A05E387121C7D60500416ECC /* SKWaveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKWaveView.h; sourceTree = "<group>"; };
+		A05E387221C7D60500416ECC /* SKWaveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKWaveView.m; sourceTree = "<group>"; };
+		A07A5C5D21C87C910057BCDF /* SKDrawImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKDrawImageView.h; sourceTree = "<group>"; };
+		A07A5C5E21C87C910057BCDF /* SKDrawImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKDrawImageView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A05E385021C7D47400416ECC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A05E384A21C7D47400416ECC = {
+			isa = PBXGroup;
+			children = (
+				A05E385521C7D47400416ECC /* Wave */,
+				A05E385421C7D47400416ECC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A05E385421C7D47400416ECC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A05E385321C7D47400416ECC /* Wave.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A05E385521C7D47400416ECC /* Wave */ = {
+			isa = PBXGroup;
+			children = (
+				A05E386D21C7D4D000416ECC /* common */,
+				A05E385621C7D47400416ECC /* AppDelegate.h */,
+				A05E385721C7D47400416ECC /* AppDelegate.m */,
+				A05E385921C7D47400416ECC /* ViewController.h */,
+				A05E385A21C7D47400416ECC /* ViewController.m */,
+				A05E385C21C7D47400416ECC /* Main.storyboard */,
+				A05E385F21C7D47800416ECC /* Assets.xcassets */,
+				A05E386121C7D47800416ECC /* LaunchScreen.storyboard */,
+				A05E386421C7D47800416ECC /* Info.plist */,
+				A05E386521C7D47800416ECC /* main.m */,
+			);
+			path = Wave;
+			sourceTree = "<group>";
+		};
+		A05E386D21C7D4D000416ECC /* common */ = {
+			isa = PBXGroup;
+			children = (
+				A05E386E21C7D4F500416ECC /* SKWeakTargetOb.h */,
+				A05E386F21C7D4F500416ECC /* SKWeakTargetOb.m */,
+				A05E387121C7D60500416ECC /* SKWaveView.h */,
+				A05E387221C7D60500416ECC /* SKWaveView.m */,
+				A07A5C5D21C87C910057BCDF /* SKDrawImageView.h */,
+				A07A5C5E21C87C910057BCDF /* SKDrawImageView.m */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A05E385221C7D47400416ECC /* Wave */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A05E386921C7D47800416ECC /* Build configuration list for PBXNativeTarget "Wave" */;
+			buildPhases = (
+				A05E384F21C7D47400416ECC /* Sources */,
+				A05E385021C7D47400416ECC /* Frameworks */,
+				A05E385121C7D47400416ECC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wave;
+			productName = Wave;
+			productReference = A05E385321C7D47400416ECC /* Wave.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A05E384B21C7D47400416ECC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "lin kang";
+				TargetAttributes = {
+					A05E385221C7D47400416ECC = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = A05E384E21C7D47400416ECC /* Build configuration list for PBXProject "Wave" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A05E384A21C7D47400416ECC;
+			productRefGroup = A05E385421C7D47400416ECC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A05E385221C7D47400416ECC /* Wave */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A05E385121C7D47400416ECC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A05E386321C7D47800416ECC /* LaunchScreen.storyboard in Resources */,
+				A05E386021C7D47800416ECC /* Assets.xcassets in Resources */,
+				A05E385E21C7D47400416ECC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A05E384F21C7D47400416ECC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A05E387321C7D60500416ECC /* SKWaveView.m in Sources */,
+				A05E385B21C7D47400416ECC /* ViewController.m in Sources */,
+				A05E387021C7D4F500416ECC /* SKWeakTargetOb.m in Sources */,
+				A05E386621C7D47800416ECC /* main.m in Sources */,
+				A07A5C5F21C87C910057BCDF /* SKDrawImageView.m in Sources */,
+				A05E385821C7D47400416ECC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A05E385C21C7D47400416ECC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A05E385D21C7D47400416ECC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A05E386121C7D47800416ECC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A05E386221C7D47800416ECC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A05E386721C7D47800416ECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A05E386821C7D47800416ECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A05E386A21C7D47800416ECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2383VW436;
+				INFOPLIST_FILE = Wave/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kl.Wave.kl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A05E386B21C7D47800416ECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2383VW436;
+				INFOPLIST_FILE = Wave/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kl.Wave.kl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A05E384E21C7D47400416ECC /* Build configuration list for PBXProject "Wave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A05E386721C7D47800416ECC /* Debug */,
+				A05E386821C7D47800416ECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A05E386921C7D47800416ECC /* Build configuration list for PBXNativeTarget "Wave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A05E386A21C7D47800416ECC /* Debug */,
+				A05E386B21C7D47800416ECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A05E384B21C7D47400416ECC /* Project object */;
+}

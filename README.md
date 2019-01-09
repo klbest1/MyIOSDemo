@@ -56,7 +56,16 @@ dataObject.showNumbers = @[@(1000.2),@(-100.2),@(2000.23),@(600.62),@(700.82),@(
  ```
 ### 5.YKPhotoMediaBroswer
 仿微信朋友圈图片视频浏览，图片来源网络，本地，相册。已在实际项目中使用。      
-![image](https://github.com/klbest1/MyIOSDemo/blob/master/Images/browser.gif)              
+![image](https://github.com/klbest1/MyIOSDemo/blob/master/Images/browser.gif) 
+
 ### 6.ZoomAndCropperImage
 图片裁剪，可用于头像     
 ![image](https://github.com/klbest1/MyIOSDemo/blob/master/Images/crop.gif)          
+
+### 7.Wave
+水晶球动画，可用于加载动画，进度条指示     
+![image](https://github.com/klbest1/MyIOSDemo/blob/master/Images/wave.gif)   
+
+### 8.TableViewCache
+列表图片加载缓存，实现缓存基本逻辑，可用于扩展更复杂缓存逻辑
+

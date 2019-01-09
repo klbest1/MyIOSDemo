@@ -31,12 +31,12 @@ class ViewController: UIViewController {
     }
 
     func createDataSource() -> [YKCellObject] {
-        let urls = ["http://wmimg.sc115.com/wm/pic/1604/1604yrzhgpb3j4f.jpg",
-                    "http://wmimg.sc115.com/wm/pic/1604/1604ig4im5f3njj.jpg",
-                    "http://wmimg.sc115.com/wm/pic/1604/16045kx4uwfxord.jpg",
-                    "http://wmimg.sc115.com/wm/pic/1604/1604dkvchqstttf.jpg",
-                    "http://wmimg.sc115.com/wm/pic/1604/1604des0fx3wmix.jpg",
-                    "http://wmimg.sc115.com/wm/pic/1604/160445kyw2rolb1.jpg"]
+        let urls = ["https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2933647892,978329588&fm=26&gp=0.jpg",
+                    "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=869142834,1817338985&fm=26&gp=0.jpg",
+                    "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=597770600,712290306&fm=26&gp=0.jpg",
+                    "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3293946031,1019132218&fm=26&gp=0.jpg",
+                    "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1193644796,3942273060&fm=26&gp=0.jpg",
+                    "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=730806580,2728988557&fm=26&gp=0.jpg"]
         
         var tDataSrouce = [YKCellObject]()
         for url in urls{

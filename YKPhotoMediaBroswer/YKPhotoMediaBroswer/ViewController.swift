@@ -23,7 +23,7 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate,UINaviga
         
         //Section 1
         var imageOb = YKMediaObject()
-        imageOb.path = "http://demo.chofn.com:88/uploads/documents/water/2018/05/31/9a3e92d4576f777c.png"
+        imageOb.path = "https://f11.baidu.com/it/u=1579226703,4165018773&fm=207"
         dataSource.append( imageOb )
         
         imageOb = YKMediaObject()
@@ -31,20 +31,20 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate,UINaviga
         dataSource.append( imageOb )
 
         imageOb = YKMediaObject()
-        imageOb.path = "http://img.taopic.com/uploads/allimg/140804/240388-140P40P33417.jpg"
+        imageOb.path = "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1422793712,2842733263&fm=26&gp=0.jpg"
         dataSource.append( imageOb )
 
         //Section 2  gif图片
         imageOb = YKMediaObject()
-        imageOb.path = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1519980888651&di=1747dc8d4dae72176057984c8030f831&imgtype=0&src=http%3A%2F%2Fimg1.utuku.china.com%2Fuploadimg%2Fgame%2F20160302%2F59662447-fe04-44d5-b590-dcc2665416e5.gif"
+        imageOb.path = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547017676111&di=2a91d3779e2a87cfd84250c7414c44c9&imgtype=0&src=http%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_gif%2Fttebm7ceEvgsZPqAVAOqLYv6AgfPDXS3Yq6iauuTkibZgWNw5Rey6h9exk95TyldmWaDG0JAeCGLxqMtV6htQMFA%2F640%3Fwx_fmt%3Dgif"
         dataSource.append( imageOb )
 
         imageOb = YKMediaObject()
-        imageOb.path = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1519980888652&di=b342a30434af6b87bb595e11ad27ec08&imgtype=0&src=http%3A%2F%2Fww1.sinaimg.cn%2Fmw690%2Fc2adb464tw1ethcbfolxlg208w06oqv6.gif"
+        imageOb.path = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547017906227&di=8248bb5f36dcb62dc466f450958eeac8&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fgames%2Ftransform%2F20160819%2FYmeB-fxvecqa7250759.gif"
         dataSource.append( imageOb )
 
         imageOb = YKMediaObject()
-        imageOb.path = "http://wmimg.sc115.com/wm/pic/1604/160445kyw2rolb1.jpg"
+        imageOb.path = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547017724621&di=82de933efd94e93a37dea8e2fc298c32&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01ce0c597efd4f000000212931fcd4.gif"
         dataSource.append( imageOb )
         
         //Section 3 长图片
@@ -59,7 +59,7 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate,UINaviga
         dataSource.append( imageOb )
         
         imageOb = YKMediaObject()
-        imageOb.path = "http://wmimg.sc115.com/wm/pic/1604/160445kyw2rolb1.jpg"
+        imageOb.path = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547018076626&di=b638cc2641155c66da0f21357cca70f1&imgtype=0&src=http%3A%2F%2Fpic46.nipic.com%2F20140816%2F13702399_105028303000_2.jpg"
         dataSource.append( imageOb )
         
         //Section 4 视频

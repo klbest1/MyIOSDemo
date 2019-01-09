@@ -1,0 +1,5 @@
+framework module "ZhuoZhuo" {
+	header "ZhuoZhuo.h"
+    export *
+
+}
