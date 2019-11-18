@@ -536,7 +536,7 @@
 				DEVELOPMENT_TEAM = Q8C2NBM6JK;
 				INFOPLIST_FILE = ImageSwiper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kanglin.ImageSwiper;
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.Imagwiper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -552,7 +552,7 @@
 				DEVELOPMENT_TEAM = Q8C2NBM6JK;
 				INFOPLIST_FILE = ImageSwiper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kanglin.ImageSwiper;
+				PRODUCT_BUNDLE_IDENTIFIER = kanglin.Imagwiper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
