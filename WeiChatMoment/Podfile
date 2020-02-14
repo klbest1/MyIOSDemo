@@ -1,0 +1,9 @@
+platform :ios, '9.0'
+
+target 'WeiChatMoment' do
+
+pod 'Alamofire'
+pod 'HandyJSON'
+
+end
+

@@ -1,0 +1,682 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9954BA2BAFC65AC12A758ED1 /* libPods-WeiChatMoment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A91768F8BBF1C71C2699F1 /* libPods-WeiChatMoment.a */; };
+		A0441D7A23780EC3008FB0C1 /* YKTouchImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0441D7323780EC2008FB0C1 /* YKTouchImageView.swift */; };
+		A0441D7B23780EC3008FB0C1 /* YKMediaZoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0441D7423780EC2008FB0C1 /* YKMediaZoomView.swift */; };
+		A0441D7C23780EC3008FB0C1 /* YKMediaScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0441D7523780EC3008FB0C1 /* YKMediaScrollerView.swift */; };
+		A0441D7D23780EC3008FB0C1 /* YKMediaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0441D7623780EC3008FB0C1 /* YKMediaObject.swift */; };
+		A0441D7E23780EC3008FB0C1 /* YKPageDotContol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0441D7723780EC3008FB0C1 /* YKPageDotContol.swift */; };
+		A0441D7F23780EC3008FB0C1 /* YKMediaFileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0441D7823780EC3008FB0C1 /* YKMediaFileHandler.swift */; };
+		A079681323753C4000A1D58A /* UImageView_Extends.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079681223753C4000A1D58A /* UImageView_Extends.swift */; };
+		A079681523753D3100A1D58A /* DownLoadImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079681423753D3100A1D58A /* DownLoadImageHelper.swift */; };
+		A07968172375415A00A1D58A /* String_Extends.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07968162375415A00A1D58A /* String_Extends.swift */; };
+		A079681D2375474100A1D58A /* ThreadsLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079681C2375474100A1D58A /* ThreadsLock.swift */; };
+		A0C7D4ED23743F8600BEB528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7D4EC23743F8600BEB528 /* AppDelegate.swift */; };
+		A0C7D4EF23743F8600BEB528 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7D4EE23743F8600BEB528 /* SceneDelegate.swift */; };
+		A0C7D4F123743F8600BEB528 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7D4F023743F8600BEB528 /* ViewController.swift */; };
+		A0C7D4F423743F8600BEB528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0C7D4F223743F8600BEB528 /* Main.storyboard */; };
+		A0C7D4F623743F8700BEB528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C7D4F523743F8700BEB528 /* Assets.xcassets */; };
+		A0C7D4F923743F8700BEB528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0C7D4F723743F8700BEB528 /* LaunchScreen.storyboard */; };
+		A0C7D50D23744F8A00BEB528 /* MomentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7D50C23744F8A00BEB528 /* MomentInfo.swift */; };
+		A0C7D50F237452D000BEB528 /* IMageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7D50E237452D000BEB528 /* IMageURL.swift */; };
+		A0C7D5112374534400BEB528 /* SenderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7D5102374534400BEB528 /* SenderInfo.swift */; };
+		A0C7D5132374540400BEB528 /* CommentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7D5122374540400BEB528 /* CommentInfo.swift */; };
+		A0C7D5152374554300BEB528 /* MomentLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7D5142374554300BEB528 /* MomentLists.swift */; };
+		A0C7D517237457BD00BEB528 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7D516237457BD00BEB528 /* UserInfo.swift */; };
+		A0C7D5202374720B00BEB528 /* Ulties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C7D51F2374720B00BEB528 /* Ulties.swift */; };
+		A0F0F2A923794864005BDFDB /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0F0F29F23794864005BDFDB /* ImageCollectionViewCell.xib */; };
+		A0F0F2AA23794864005BDFDB /* YKRefreshLoadMoreTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F0F2A023794864005BDFDB /* YKRefreshLoadMoreTableView.swift */; };
+		A0F0F2AB23794864005BDFDB /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0F0F2A123794864005BDFDB /* HeaderView.xib */; };
+		A0F0F2AC23794864005BDFDB /* YKBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F0F2A223794864005BDFDB /* YKBaseTableViewCell.swift */; };
+		A0F0F2AD23794864005BDFDB /* MomentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F0F2A323794864005BDFDB /* MomentTableViewCell.swift */; };
+		A0F0F2AE23794864005BDFDB /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F0F2A423794864005BDFDB /* CommentTableViewCell.swift */; };
+		A0F0F2AF23794864005BDFDB /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0F0F2A523794864005BDFDB /* CommentTableViewCell.xib */; };
+		A0F0F2B023794864005BDFDB /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F0F2A623794864005BDFDB /* HeaderView.swift */; };
+		A0F0F2B123794864005BDFDB /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F0F2A723794864005BDFDB /* ImageCollectionViewCell.swift */; };
+		A0F0F2B223794864005BDFDB /* MomentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0F0F2A823794864005BDFDB /* MomentTableViewCell.xib */; };
+		A0F0F2BC23794F84005BDFDB /* WeiChatMomentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F0F2BB23794F84005BDFDB /* WeiChatMomentTests.swift */; };
+		A0F0F2C4237959F9005BDFDB /* DownLoadImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079681423753D3100A1D58A /* DownLoadImageHelper.swift */; };
+		A0F0F2C5237959FE005BDFDB /* UImageView_Extends.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079681223753C4000A1D58A /* UImageView_Extends.swift */; };
+		A0F0F2C623795A01005BDFDB /* String_Extends.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07968162375415A00A1D58A /* String_Extends.swift */; };
+		A0F0F2C723795A04005BDFDB /* ThreadsLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079681C2375474100A1D58A /* ThreadsLock.swift */; };
+		A0F3D9A823779B75003B47FB /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F3D9A723779B75003B47FB /* String.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A0F0F2BE23794F84005BDFDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0C7D4E123743F8600BEB528 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0C7D4E823743F8600BEB528;
+			remoteInfo = WeiChatMoment;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A0441D7323780EC2008FB0C1 /* YKTouchImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKTouchImageView.swift; sourceTree = "<group>"; };
+		A0441D7423780EC2008FB0C1 /* YKMediaZoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKMediaZoomView.swift; sourceTree = "<group>"; };
+		A0441D7523780EC3008FB0C1 /* YKMediaScrollerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKMediaScrollerView.swift; sourceTree = "<group>"; };
+		A0441D7623780EC3008FB0C1 /* YKMediaObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKMediaObject.swift; sourceTree = "<group>"; };
+		A0441D7723780EC3008FB0C1 /* YKPageDotContol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKPageDotContol.swift; sourceTree = "<group>"; };
+		A0441D7823780EC3008FB0C1 /* YKMediaFileHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKMediaFileHandler.swift; sourceTree = "<group>"; };
+		A079681223753C4000A1D58A /* UImageView_Extends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UImageView_Extends.swift; sourceTree = "<group>"; };
+		A079681423753D3100A1D58A /* DownLoadImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownLoadImageHelper.swift; sourceTree = "<group>"; };
+		A07968162375415A00A1D58A /* String_Extends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String_Extends.swift; sourceTree = "<group>"; };
+		A079681C2375474100A1D58A /* ThreadsLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsLock.swift; sourceTree = "<group>"; };
+		A0C7D4E923743F8600BEB528 /* WeiChatMoment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiChatMoment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C7D4EC23743F8600BEB528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A0C7D4EE23743F8600BEB528 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A0C7D4F023743F8600BEB528 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A0C7D4F323743F8600BEB528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A0C7D4F523743F8700BEB528 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0C7D4F823743F8700BEB528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A0C7D4FA23743F8700BEB528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0C7D50C23744F8A00BEB528 /* MomentInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentInfo.swift; sourceTree = "<group>"; };
+		A0C7D50E237452D000BEB528 /* IMageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMageURL.swift; sourceTree = "<group>"; };
+		A0C7D5102374534400BEB528 /* SenderInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderInfo.swift; sourceTree = "<group>"; };
+		A0C7D5122374540400BEB528 /* CommentInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInfo.swift; sourceTree = "<group>"; };
+		A0C7D5142374554300BEB528 /* MomentLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentLists.swift; sourceTree = "<group>"; };
+		A0C7D516237457BD00BEB528 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		A0C7D51F2374720B00BEB528 /* Ulties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ulties.swift; sourceTree = "<group>"; };
+		A0F0F29F23794864005BDFDB /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		A0F0F2A023794864005BDFDB /* YKRefreshLoadMoreTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKRefreshLoadMoreTableView.swift; sourceTree = "<group>"; };
+		A0F0F2A123794864005BDFDB /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		A0F0F2A223794864005BDFDB /* YKBaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YKBaseTableViewCell.swift; sourceTree = "<group>"; };
+		A0F0F2A323794864005BDFDB /* MomentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentTableViewCell.swift; sourceTree = "<group>"; };
+		A0F0F2A423794864005BDFDB /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		A0F0F2A523794864005BDFDB /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		A0F0F2A623794864005BDFDB /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		A0F0F2A723794864005BDFDB /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		A0F0F2A823794864005BDFDB /* MomentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MomentTableViewCell.xib; sourceTree = "<group>"; };
+		A0F0F2B923794F84005BDFDB /* WeiChatMomentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiChatMomentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0F0F2BB23794F84005BDFDB /* WeiChatMomentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiChatMomentTests.swift; sourceTree = "<group>"; };
+		A0F0F2BD23794F84005BDFDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0F3D9A723779B75003B47FB /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		A2C25B3080D92E00B56FE0ED /* Pods-WeiChatMoment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiChatMoment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeiChatMoment/Pods-WeiChatMoment.debug.xcconfig"; sourceTree = "<group>"; };
+		AD4E8D641B35299E5F9F7EFA /* Pods-WeiChatMoment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiChatMoment.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeiChatMoment/Pods-WeiChatMoment.release.xcconfig"; sourceTree = "<group>"; };
+		D1A91768F8BBF1C71C2699F1 /* libPods-WeiChatMoment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeiChatMoment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0C7D4E623743F8600BEB528 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9954BA2BAFC65AC12A758ED1 /* libPods-WeiChatMoment.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0F0F2B623794F84005BDFDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36013D137C2F2520804401B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1A91768F8BBF1C71C2699F1 /* libPods-WeiChatMoment.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3CBE2152D8CD07E177EDDE80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2C25B3080D92E00B56FE0ED /* Pods-WeiChatMoment.debug.xcconfig */,
+				AD4E8D641B35299E5F9F7EFA /* Pods-WeiChatMoment.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A0441D7223780EB5008FB0C1 /* MediaBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				A0441D7823780EC3008FB0C1 /* YKMediaFileHandler.swift */,
+				A0441D7623780EC3008FB0C1 /* YKMediaObject.swift */,
+				A0441D7523780EC3008FB0C1 /* YKMediaScrollerView.swift */,
+				A0441D7423780EC2008FB0C1 /* YKMediaZoomView.swift */,
+				A0441D7723780EC3008FB0C1 /* YKPageDotContol.swift */,
+				A0441D7323780EC2008FB0C1 /* YKTouchImageView.swift */,
+			);
+			path = MediaBrowser;
+			sourceTree = "<group>";
+		};
+		A079681123753C0A00A1D58A /* ImageDownload */ = {
+			isa = PBXGroup;
+			children = (
+				A079681223753C4000A1D58A /* UImageView_Extends.swift */,
+				A079681423753D3100A1D58A /* DownLoadImageHelper.swift */,
+				A07968162375415A00A1D58A /* String_Extends.swift */,
+				A079681C2375474100A1D58A /* ThreadsLock.swift */,
+			);
+			path = ImageDownload;
+			sourceTree = "<group>";
+		};
+		A0C7D4E023743F8600BEB528 = {
+			isa = PBXGroup;
+			children = (
+				A0C7D4EB23743F8600BEB528 /* WeiChatMoment */,
+				A0F0F2BA23794F84005BDFDB /* WeiChatMomentTests */,
+				A0C7D4EA23743F8600BEB528 /* Products */,
+				3CBE2152D8CD07E177EDDE80 /* Pods */,
+				36013D137C2F2520804401B9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A0C7D4EA23743F8600BEB528 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0C7D4E923743F8600BEB528 /* WeiChatMoment.app */,
+				A0F0F2B923794F84005BDFDB /* WeiChatMomentTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0C7D4EB23743F8600BEB528 /* WeiChatMoment */ = {
+			isa = PBXGroup;
+			children = (
+				A0F0F29E23794864005BDFDB /* Views */,
+				A0441D7223780EB5008FB0C1 /* MediaBrowser */,
+				A0F3D9A623779B53003B47FB /* Extends */,
+				A079681123753C0A00A1D58A /* ImageDownload */,
+				A0C7D51E2374712E00BEB528 /* Models */,
+				A0C7D4EC23743F8600BEB528 /* AppDelegate.swift */,
+				A0C7D4EE23743F8600BEB528 /* SceneDelegate.swift */,
+				A0C7D4F023743F8600BEB528 /* ViewController.swift */,
+				A0C7D4F223743F8600BEB528 /* Main.storyboard */,
+				A0C7D4F523743F8700BEB528 /* Assets.xcassets */,
+				A0C7D4F723743F8700BEB528 /* LaunchScreen.storyboard */,
+				A0C7D4FA23743F8700BEB528 /* Info.plist */,
+			);
+			path = WeiChatMoment;
+			sourceTree = "<group>";
+		};
+		A0C7D51E2374712E00BEB528 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A0C7D50C23744F8A00BEB528 /* MomentInfo.swift */,
+				A0C7D50E237452D000BEB528 /* IMageURL.swift */,
+				A0C7D5102374534400BEB528 /* SenderInfo.swift */,
+				A0C7D5122374540400BEB528 /* CommentInfo.swift */,
+				A0C7D5142374554300BEB528 /* MomentLists.swift */,
+				A0C7D516237457BD00BEB528 /* UserInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A0F0F29E23794864005BDFDB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A0F0F29F23794864005BDFDB /* ImageCollectionViewCell.xib */,
+				A0F0F2A023794864005BDFDB /* YKRefreshLoadMoreTableView.swift */,
+				A0F0F2A123794864005BDFDB /* HeaderView.xib */,
+				A0F0F2A223794864005BDFDB /* YKBaseTableViewCell.swift */,
+				A0F0F2A323794864005BDFDB /* MomentTableViewCell.swift */,
+				A0F0F2A423794864005BDFDB /* CommentTableViewCell.swift */,
+				A0F0F2A523794864005BDFDB /* CommentTableViewCell.xib */,
+				A0F0F2A623794864005BDFDB /* HeaderView.swift */,
+				A0F0F2A723794864005BDFDB /* ImageCollectionViewCell.swift */,
+				A0F0F2A823794864005BDFDB /* MomentTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A0F0F2BA23794F84005BDFDB /* WeiChatMomentTests */ = {
+			isa = PBXGroup;
+			children = (
+				A0F0F2BB23794F84005BDFDB /* WeiChatMomentTests.swift */,
+				A0F0F2BD23794F84005BDFDB /* Info.plist */,
+			);
+			path = WeiChatMomentTests;
+			sourceTree = "<group>";
+		};
+		A0F3D9A623779B53003B47FB /* Extends */ = {
+			isa = PBXGroup;
+			children = (
+				A0C7D51F2374720B00BEB528 /* Ulties.swift */,
+				A0F3D9A723779B75003B47FB /* String.swift */,
+			);
+			path = Extends;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0C7D4E823743F8600BEB528 /* WeiChatMoment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0C7D4FD23743F8700BEB528 /* Build configuration list for PBXNativeTarget "WeiChatMoment" */;
+			buildPhases = (
+				6273FC0A06868EFFC792EAD0 /* [CP] Check Pods Manifest.lock */,
+				A0C7D4E523743F8600BEB528 /* Sources */,
+				A0C7D4E623743F8600BEB528 /* Frameworks */,
+				A0C7D4E723743F8600BEB528 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeiChatMoment;
+			productName = WeiChatMoment;
+			productReference = A0C7D4E923743F8600BEB528 /* WeiChatMoment.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A0F0F2B823794F84005BDFDB /* WeiChatMomentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0F0F2C023794F84005BDFDB /* Build configuration list for PBXNativeTarget "WeiChatMomentTests" */;
+			buildPhases = (
+				A0F0F2B523794F84005BDFDB /* Sources */,
+				A0F0F2B623794F84005BDFDB /* Frameworks */,
+				A0F0F2B723794F84005BDFDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0F0F2BF23794F84005BDFDB /* PBXTargetDependency */,
+			);
+			name = WeiChatMomentTests;
+			productName = WeiChatMomentTests;
+			productReference = A0F0F2B923794F84005BDFDB /* WeiChatMomentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0C7D4E123743F8600BEB528 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = TW;
+				TargetAttributes = {
+					A0C7D4E823743F8600BEB528 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					A0F0F2B823794F84005BDFDB = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = A0C7D4E823743F8600BEB528;
+					};
+				};
+			};
+			buildConfigurationList = A0C7D4E423743F8600BEB528 /* Build configuration list for PBXProject "WeiChatMoment" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A0C7D4E023743F8600BEB528;
+			productRefGroup = A0C7D4EA23743F8600BEB528 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0C7D4E823743F8600BEB528 /* WeiChatMoment */,
+				A0F0F2B823794F84005BDFDB /* WeiChatMomentTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0C7D4E723743F8600BEB528 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C7D4F923743F8700BEB528 /* LaunchScreen.storyboard in Resources */,
+				A0F0F2AF23794864005BDFDB /* CommentTableViewCell.xib in Resources */,
+				A0F0F2AB23794864005BDFDB /* HeaderView.xib in Resources */,
+				A0C7D4F623743F8700BEB528 /* Assets.xcassets in Resources */,
+				A0F0F2A923794864005BDFDB /* ImageCollectionViewCell.xib in Resources */,
+				A0C7D4F423743F8600BEB528 /* Main.storyboard in Resources */,
+				A0F0F2B223794864005BDFDB /* MomentTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0F0F2B723794F84005BDFDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6273FC0A06868EFFC792EAD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeiChatMoment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0C7D4E523743F8600BEB528 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0F0F2AA23794864005BDFDB /* YKRefreshLoadMoreTableView.swift in Sources */,
+				A07968172375415A00A1D58A /* String_Extends.swift in Sources */,
+				A0F0F2AE23794864005BDFDB /* CommentTableViewCell.swift in Sources */,
+				A0C7D5132374540400BEB528 /* CommentInfo.swift in Sources */,
+				A079681D2375474100A1D58A /* ThreadsLock.swift in Sources */,
+				A0441D7E23780EC3008FB0C1 /* YKPageDotContol.swift in Sources */,
+				A0C7D5112374534400BEB528 /* SenderInfo.swift in Sources */,
+				A0C7D5202374720B00BEB528 /* Ulties.swift in Sources */,
+				A0F0F2AC23794864005BDFDB /* YKBaseTableViewCell.swift in Sources */,
+				A0441D7F23780EC3008FB0C1 /* YKMediaFileHandler.swift in Sources */,
+				A079681523753D3100A1D58A /* DownLoadImageHelper.swift in Sources */,
+				A0C7D4F123743F8600BEB528 /* ViewController.swift in Sources */,
+				A0441D7A23780EC3008FB0C1 /* YKTouchImageView.swift in Sources */,
+				A0441D7B23780EC3008FB0C1 /* YKMediaZoomView.swift in Sources */,
+				A0C7D5152374554300BEB528 /* MomentLists.swift in Sources */,
+				A0F0F2B123794864005BDFDB /* ImageCollectionViewCell.swift in Sources */,
+				A0F3D9A823779B75003B47FB /* String.swift in Sources */,
+				A0C7D4ED23743F8600BEB528 /* AppDelegate.swift in Sources */,
+				A0441D7C23780EC3008FB0C1 /* YKMediaScrollerView.swift in Sources */,
+				A0C7D4EF23743F8600BEB528 /* SceneDelegate.swift in Sources */,
+				A079681323753C4000A1D58A /* UImageView_Extends.swift in Sources */,
+				A0C7D50D23744F8A00BEB528 /* MomentInfo.swift in Sources */,
+				A0C7D517237457BD00BEB528 /* UserInfo.swift in Sources */,
+				A0441D7D23780EC3008FB0C1 /* YKMediaObject.swift in Sources */,
+				A0C7D50F237452D000BEB528 /* IMageURL.swift in Sources */,
+				A0F0F2AD23794864005BDFDB /* MomentTableViewCell.swift in Sources */,
+				A0F0F2B023794864005BDFDB /* HeaderView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0F0F2B523794F84005BDFDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0F0F2C623795A01005BDFDB /* String_Extends.swift in Sources */,
+				A0F0F2BC23794F84005BDFDB /* WeiChatMomentTests.swift in Sources */,
+				A0F0F2C4237959F9005BDFDB /* DownLoadImageHelper.swift in Sources */,
+				A0F0F2C5237959FE005BDFDB /* UImageView_Extends.swift in Sources */,
+				A0F0F2C723795A04005BDFDB /* ThreadsLock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A0F0F2BF23794F84005BDFDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0C7D4E823743F8600BEB528 /* WeiChatMoment */;
+			targetProxy = A0F0F2BE23794F84005BDFDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A0C7D4F223743F8600BEB528 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0C7D4F323743F8600BEB528 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A0C7D4F723743F8700BEB528 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0C7D4F823743F8700BEB528 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A0C7D4FB23743F8700BEB528 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A0C7D4FC23743F8700BEB528 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0C7D4FE23743F8700BEB528 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2C25B3080D92E00B56FE0ED /* Pods-WeiChatMoment.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2383VW436;
+				INFOPLIST_FILE = WeiChatMoment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TW.WeiChatMoment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A0C7D4FF23743F8700BEB528 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD4E8D641B35299E5F9F7EFA /* Pods-WeiChatMoment.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2383VW436;
+				INFOPLIST_FILE = WeiChatMoment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TW.WeiChatMoment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A0F0F2C123794F84005BDFDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2383VW436;
+				INFOPLIST_FILE = WeiChatMomentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TW.WeiChatMomentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeiChatMoment.app/WeiChatMoment";
+			};
+			name = Debug;
+		};
+		A0F0F2C223794F84005BDFDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H2383VW436;
+				INFOPLIST_FILE = WeiChatMomentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TW.WeiChatMomentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeiChatMoment.app/WeiChatMoment";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0C7D4E423743F8600BEB528 /* Build configuration list for PBXProject "WeiChatMoment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C7D4FB23743F8700BEB528 /* Debug */,
+				A0C7D4FC23743F8700BEB528 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0C7D4FD23743F8700BEB528 /* Build configuration list for PBXNativeTarget "WeiChatMoment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C7D4FE23743F8700BEB528 /* Debug */,
+				A0C7D4FF23743F8700BEB528 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0F0F2C023794F84005BDFDB /* Build configuration list for PBXNativeTarget "WeiChatMomentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0F0F2C123794F84005BDFDB /* Debug */,
+				A0F0F2C223794F84005BDFDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0C7D4E123743F8600BEB528 /* Project object */;
+}

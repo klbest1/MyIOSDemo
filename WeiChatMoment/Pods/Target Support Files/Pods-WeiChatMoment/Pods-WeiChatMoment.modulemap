@@ -1,0 +1,6 @@
+module Pods_WeiChatMoment {
+  umbrella header "Pods-WeiChatMoment-umbrella.h"
+
+  export *
+  module * { export * }
+}
