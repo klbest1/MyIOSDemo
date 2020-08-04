@@ -7,7 +7,7 @@
 ### 2.BadgeView
 数量标记，爆炸动画，使用方便。已在实际项目中使用。     
 ![image](https://github.com/klbest1/MyIOSDemo/blob/master/Images/badge.gif)                           
-   
+
 使用实例：    
 ```c
 let config = BageConfig()
@@ -53,7 +53,7 @@ dataObject.ySuffix = @"K";
 dataObject.xDescriptionDataSource = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周七"];
 dataObject.showNumbers = @[@(1000.2),@(-100.2),@(2000.23),@(600.62),@(700.82),@(800.2),@(100.72)];
 [_chartView setupDataSource:dataObject withUIConfgi:config];
- ```
+```
 ### 5.YKPhotoMediaBroswer
 仿微信朋友圈图片视频浏览，图片来源网络，本地，相册。已在实际项目中使用。      
 ![image](https://github.com/klbest1/MyIOSDemo/blob/master/Images/browser.gif) 
@@ -68,4 +68,8 @@ dataObject.showNumbers = @[@(1000.2),@(-100.2),@(2000.23),@(600.62),@(700.82),@(
 
 ### 8.TableViewCache
 列表图片加载缓存，实现缓存基本逻辑，可用于扩展更复杂缓存逻辑
+
+### 9.AutoLayout 仿微信朋友圈
+
+列表图片加载缓存，MediaBroswer实际运用结合，反序列化
 

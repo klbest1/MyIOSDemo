@@ -12,8 +12,7 @@ import Alamofire
 import HandyJSON
 
 /*
- *  Note: I extraly add images browser for the homework, including pan guesture for the image which you can
- *  dismiss image by move it across the screen.
+ * 
 */
 
 class ViewController: UIViewController {
@@ -51,6 +50,7 @@ class ViewController: UIViewController {
                 self.parallexHeaderView.setHeader(userInfo)
             }
         }
+
     Alamofire.request("https://thoughtworks-mobile-2018.herokuapp.com/user/jsmith/tweets").validate()
         . responseString { [weak self] (response) in
             guard response.result.isSuccess else { return }
